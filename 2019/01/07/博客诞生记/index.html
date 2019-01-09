@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Hexo是什么？简单的说，Hexo是一个由 Node.js 驱动的一款快速、简单且功能强大的博客框架。它的主要作用是，使用 Markdown（或其他渲染引擎）解析文章，在几秒内利用自带主题生成静态网页。它的作用是让使用者专注写作，而不是花大量时间配主题。 安装HexoStep1 安装Node.js Node.js是什么？具体参考：https://www.zhihu.com/question/335">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客诞生记">
+<meta property="og:url" content="http://yoursite.com/2019/01/07/博客诞生记/index.html">
+<meta property="og:site_name" content="造物之旅">
+<meta property="og:description" content="Hexo是什么？简单的说，Hexo是一个由 Node.js 驱动的一款快速、简单且功能强大的博客框架。它的主要作用是，使用 Markdown（或其他渲染引擎）解析文章，在几秒内利用自带主题生成静态网页。它的作用是让使用者专注写作，而不是花大量时间配主题。 安装HexoStep1 安装Node.js Node.js是什么？具体参考：https://www.zhihu.com/question/335">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-01-08T12:14:40.911Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="博客诞生记">
+<meta name="twitter:description" content="Hexo是什么？简单的说，Hexo是一个由 Node.js 驱动的一款快速、简单且功能强大的博客框架。它的主要作用是，使用 Markdown（或其他渲染引擎）解析文章，在几秒内利用自带主题生成静态网页。它的作用是让使用者专注写作，而不是花大量时间配主题。 安装HexoStep1 安装Node.js Node.js是什么？具体参考：https://www.zhihu.com/question/335">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>博客诞生记</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/10/28/hello-world/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/01/07/博客诞生记/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/01/07/博客诞生记/&text=博客诞生记"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/01/07/博客诞生记/&title=博客诞生记"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/01/07/博客诞生记/&is_video=false&description=博客诞生记"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=博客诞生记&body=Check out this article: http://yoursite.com/2019/01/07/博客诞生记/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/01/07/博客诞生记/&title=博客诞生记"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/01/07/博客诞生记/&title=博客诞生记"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/01/07/博客诞生记/&title=博客诞生记"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/01/07/博客诞生记/&title=博客诞生记"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/01/07/博客诞生记/&name=博客诞生记&description=&lt;h3 id=&#34;Hexo是什么？&#34;&gt;&lt;a href=&#34;#Hexo是什么？&#34; class=&#34;headerlink&#34; title=&#34;Hexo是什么？&#34;&gt;&lt;/a&gt;Hexo是什么？&lt;/h3&gt;&lt;p&gt;简单的说，Hexo是一个由 Node.js 驱动的一款快速、简单且功能强大的博客框架。它的主要作用是，使用 Markdown（或其他渲染引擎）解析文章，在几秒内利用自带主题生成静态网页。它的作用是让使用者专注写作，而不是花大量时间配主题。&lt;/p&gt;
+&lt;h3 id=&#34;安装Hexo&#34;&gt;&lt;a href=&#34;#安装Hexo&#34; class=&#34;headerlink&#34; title=&#34;安装Hexo&#34;&gt;&lt;/a&gt;安装Hexo&lt;/h3&gt;&lt;p&gt;Step1 安装Node.js&lt;/p&gt;
+&lt;p&gt;Node.js是什么？具体参考：&lt;a href=&#34;https://www.zhihu.com/question/33578075&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.zhihu.com/question/33578075&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Mac下如何安装node：&lt;br&gt;$ brew install node&lt;/p&gt;
+&lt;p&gt;Step2 安装Git&lt;/p&gt;
+&lt;p&gt;在终端中输入 git —version, 发现已经安装&lt;/p&gt;
+&lt;p&gt;Step3 安装Hexo&lt;/p&gt;
+&lt;p&gt;$ npm install -g hexo-cli&lt;/p&gt;
+&lt;p&gt;什么是npm？&lt;br&gt;npm是Nodejs下的包管理器，Use npm to install, share, and distribute code; manage dependencies in your projects; and share &amp;amp; receive feedback with others.&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo是什么？"><span class="toc-number">1.</span> <span class="toc-text">Hexo是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Hexo"><span class="toc-number">2.</span> <span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置Hexo"><span class="toc-number">3.</span> <span class="toc-text">配置Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#接下来怎么办？"><span class="toc-number">4.</span> <span class="toc-text">接下来怎么办？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置git用户名和邮箱"><span class="toc-number">5.</span> <span class="toc-text">设置git用户名和邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置git-ssh密钥"><span class="toc-number">6.</span> <span class="toc-text">配置git ssh密钥</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        博客诞生记
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <span itemprop="name">造物之旅</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-01-07T06:39:47.000Z" itemprop="datePublished">2019-01-07</time>
+        
+      
+    </div>
+
+
+      
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h3 id="Hexo是什么？"><a href="#Hexo是什么？" class="headerlink" title="Hexo是什么？"></a>Hexo是什么？</h3><p>简单的说，Hexo是一个由 Node.js 驱动的一款快速、简单且功能强大的博客框架。它的主要作用是，使用 Markdown（或其他渲染引擎）解析文章，在几秒内利用自带主题生成静态网页。它的作用是让使用者专注写作，而不是花大量时间配主题。</p>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>Step1 安装Node.js</p>
+<p>Node.js是什么？具体参考：<a href="https://www.zhihu.com/question/33578075" target="_blank" rel="noopener">https://www.zhihu.com/question/33578075</a></p>
+<p>Mac下如何安装node：<br>$ brew install node</p>
+<p>Step2 安装Git</p>
+<p>在终端中输入 git —version, 发现已经安装</p>
+<p>Step3 安装Hexo</p>
+<p>$ npm install -g hexo-cli</p>
+<p>什么是npm？<br>npm是Nodejs下的包管理器，Use npm to install, share, and distribute code; manage dependencies in your projects; and share &amp; receive feedback with others.</p>
+<a id="more"></a>
+<h3 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a>配置Hexo</h3><p>Step1 进入存放网站内容的本地文件夹<br>$ cd /folder</p>
+<p>Step2 初始化该文件夹<br>$ hexo init<br>$ npm install</p>
+<h3 id="接下来怎么办？"><a href="#接下来怎么办？" class="headerlink" title="接下来怎么办？"></a>接下来怎么办？</h3><p>生成静态文件<br>将网站部署到github</p>
+<ol>
+<li>在配置文件 _config.yml 中添加github的地址<br>deploy:<br> type: git<br> repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:yourname/yourname.github.io.git<br> branch: master</li>
+<li>安装部署至git所需的插件<br>$ npm install hexo-deployer-git –save<br>这个时候就可以部署至git了，但需要输入git用户名和密码。</li>
+<li>绑定git账号和密码</li>
+</ol>
+<h3 id="设置git用户名和邮箱"><a href="#设置git用户名和邮箱" class="headerlink" title="设置git用户名和邮箱"></a>设置git用户名和邮箱</h3><ol>
+<li>为什么要设置？<br>用户名和邮箱地址是本地git客户端的一个变量，它的作用是告诉git每次commit都是由谁来执行的。github的contributions统计就是按邮箱来统计的。</li>
+<li>查看用户名和邮箱<br>$ git config user.name<br>$ git config user.email<br>3.修改用户名和邮箱地址<br>$ git config –global user.name “username”<br>$ git config –global user.email “email”</li>
+<li>配置文件在什么地方？<br>位置1: /etc/gitconfig<br>系统级别的配置,适用于所有的用户和所有的库,可以使用 $git config –system 来指定和修改,存储在Git安装目录下<br>位置2: ~/.gitconfig<br>用户级别的配置,适用于当前登录的用户,可以使用$git config –gloabal来指定和修改,存储在C:\Documents and Settings\$USER下<br>位置3: .git/config<br>库级别的配置,适用于某个具体的库,可以使用$git config来指定和修改,存储在具体的库隐藏的.git文件夹下<br>说明:Git会优先使用库级别的配置,再然后是global级别的配置,最后是system级别的配置.</li>
+</ol>
+<h3 id="配置git-ssh密钥"><a href="#配置git-ssh密钥" class="headerlink" title="配置git ssh密钥"></a>配置git ssh密钥</h3><ol>
+<li><p>为什么要配置ssh密钥？<br>由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以必须要让github仓库认证你SSH key，在此之前，必须要生成SSH key。<br>意思就是你要把文件传到我的服务器上，必须要经过一个配对码来建立连接，否则我也不认识你啊。</p>
+</li>
+<li><p>配置流程是怎样的？<br>首先我们自己的电脑上得有一个公用的密钥，然后我们需要把电脑上的公钥告诉git。</p>
+</li>
+</ol>
+<p>2.1 查看自己电脑有没有公钥<br>默认情况下，用户的 SSH 密钥存储在其 ~/.ssh 目录下。 进入该目录并列出其中内容，你便可以快速确认自己是否已拥有密钥：<br>$ cd ~/.ssh<br>$ ls<br>authorized_keys2  id_dsa       known_hosts<br>config            id_dsa.pub<br>我们需要寻找一对以 id_dsa 或 id_rsa 命名的文件，其中一个带有 .pub 扩展名。 .pub 文件是你的公钥，另一个则是私钥。 如果找不到这样的文件（或者根本没有 .ssh 目录），你可以通过运行 ssh-keygen 程序来创建它们。<br>2.2 在本地配置公钥<br>首先 ssh-keygen 会确认密钥的存储位置（默认是 .ssh/id_rsa），然后它会要求你输入两次密钥口令。如果你不想在使用密钥时输入口令，将其留空即可。<br>$ ssh-keygen<br>Generating public/private rsa key pair.<br>Enter file in which to save the key (/Users/liyan/.ssh/id_rsa):<br>Enter passphrase (empty for no passphrase):<br>Enter same passphrase again:<br>Your identification has been saved in /Users/liyan/.ssh/id_rsa.<br>Your public key has been saved in /Users/liyan/.ssh/id_rsa.pub.<br>The key fingerprint is:<br>SHA256:uRx9/Xtr+MmHAIOLNT5BFWtkaNA9AUXkhran0iwKuBI <a href="mailto:liyan@Liyans-Mac.local" target="_blank" rel="noopener">liyan@Liyans-Mac.local</a><br>查看自己所生成的密钥：<br>$ cat ~/.ssh/id_rsa.pub<br>2.3 在git上填写公钥<br>进入 setting &gt; SSH and GPG keys，点击New SSH key添加即可。</p>
+<ol start="3">
+<li>每次向git部署文件都需要密码怎么办？<br>其实ssh-keygen的时候，可以输密码，也可以不输密码，那么如果你输了密码，ssh 登陆的时候还是会提示你将私钥的密码输入的(不需要输入服务器的密码)。而ssh-agent能避免这种反复输入私钥的烦恼。向ssh-agent添加私钥很简单：<br>$ ssh-add ~/.ssh/id_rsa<br>从ssh-agent中删除密钥：<br>$ ssh-add -d ~/.ssh/id_xxx.pub</li>
+</ol>
+<p>给博客配置主题</p>
+<ol>
+<li>挑选主题<br>在hexo官网上挑选主题，我选的是cactus主题。</li>
+<li>将主题下载至本地<br>点击主题名称，进入主题的git地址，下载并将该主题保存在网站本地文件的themes文件夹中，将文件夹名称命名为cactus。</li>
+<li>配置_config.yml文件<br>在配置文件 _config.yml 中将主题配置为theme: cactus。<br>配置完成后生成文件时产生错误：<br>hexo s<br>INFO  Start processing<br>INFO  Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>. Press Ctrl+C to stop.<br>WARN  No layout: index.html<br>出现这个错误，检查以下原因：</li>
+</ol>
+<ul>
+<li>下载的主题是不是放在了themes文件夹下面，且主题文件夹的名称是否是minos。</li>
+<li>站点配置_config.yml中的主题名称是否正确。<br>注意：有时因为主题本身的原因，可能在生成时产生诸如：<br>Unhandled rejection ReferenceError: /Users/liyan/Holiyan/themes/minos/layout/index.ejs:4<br>这样的错误，这可能是因为主题本身有问题，这时建议换个主题试试。</li>
+</ul>
+<p>生成页面并在本地服务器查看</p>
+<ol>
+<li>生成静态页面<br>$ hexo g # hexo generate</li>
+<li>在本地服务器查看<br>$ hexo s # hexo server<br>如果出现如下情况：<br>hexo s<br>FATAL Port 4000 has been used. Try other port instead.<br>则表示端口被占用了，此时我们ctrl+c停止服务器，接着输入 $ hexo server -p 端口号来改变端口号。</li>
+</ol>
+<p>域名解析</p>
+<ol>
+<li>域名解析的目的<br>我们申请了一个域名，当用户访问该域名时，域名指向哪里呢？解析的目的就是让域名指向页面。</li>
+<li>Github修改CNAME<br>在github 你的pages库的 Setting 选项里，在Custom domain中输入你购买的域名，点击保存就可以了。</li>
+<li>域名解析<br>在阿里云域名管理中，点击解析，按照操作指引解析。<br>做完以上三步就可以将域名指向github page了。</li>
+</ol>
+<p>将github代码自动部署至服务器</p>
+<ol>
+<li>在服务器上安装git</li>
+<li>在github上配置webhook<br>Webhook顾名思义，其实就是一钩子。当我们在gitlab上做出某些特定操作时，可以触发钩子，去进行一些我们事先设定好的脚本，以达到某些特定功能（例如—前端项目自动发布）。当我们成功进行了[Trigger]内部的某些或某些操作时，比如Push events—成功push了一次代码，无论是向哪个分支push，都可以触发hook……</li>
+<li>未完待续。</li>
+</ol>
+<p>写文章</p>
+<p>Create pages and articles with the hexo new [layout] <title> command. For example, to create an “about me” page, run:<br>$ hexo new page about<br>This will create a new file in source/about/index.md Similary, you can create a new article with<br>$ hexo new post “hello world”<br>and add some interesting content in source/_posts/hello-world.md.</title></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Hexo是什么？"><span class="toc-number">1.</span> <span class="toc-text">Hexo是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装Hexo"><span class="toc-number">2.</span> <span class="toc-text">安装Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置Hexo"><span class="toc-number">3.</span> <span class="toc-text">配置Hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#接下来怎么办？"><span class="toc-number">4.</span> <span class="toc-text">接下来怎么办？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设置git用户名和邮箱"><span class="toc-number">5.</span> <span class="toc-text">设置git用户名和邮箱</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#配置git-ssh密钥"><span class="toc-number">6.</span> <span class="toc-text">配置git ssh密钥</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/01/07/博客诞生记/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/01/07/博客诞生记/&text=博客诞生记"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/01/07/博客诞生记/&title=博客诞生记"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/01/07/博客诞生记/&is_video=false&description=博客诞生记"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=博客诞生记&body=Check out this article: http://yoursite.com/2019/01/07/博客诞生记/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/01/07/博客诞生记/&title=博客诞生记"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/01/07/博客诞生记/&title=博客诞生记"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/01/07/博客诞生记/&title=博客诞生记"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/01/07/博客诞生记/&title=博客诞生记"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/01/07/博客诞生记/&name=博客诞生记&description=&lt;h3 id=&#34;Hexo是什么？&#34;&gt;&lt;a href=&#34;#Hexo是什么？&#34; class=&#34;headerlink&#34; title=&#34;Hexo是什么？&#34;&gt;&lt;/a&gt;Hexo是什么？&lt;/h3&gt;&lt;p&gt;简单的说，Hexo是一个由 Node.js 驱动的一款快速、简单且功能强大的博客框架。它的主要作用是，使用 Markdown（或其他渲染引擎）解析文章，在几秒内利用自带主题生成静态网页。它的作用是让使用者专注写作，而不是花大量时间配主题。&lt;/p&gt;
+&lt;h3 id=&#34;安装Hexo&#34;&gt;&lt;a href=&#34;#安装Hexo&#34; class=&#34;headerlink&#34; title=&#34;安装Hexo&#34;&gt;&lt;/a&gt;安装Hexo&lt;/h3&gt;&lt;p&gt;Step1 安装Node.js&lt;/p&gt;
+&lt;p&gt;Node.js是什么？具体参考：&lt;a href=&#34;https://www.zhihu.com/question/33578075&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.zhihu.com/question/33578075&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Mac下如何安装node：&lt;br&gt;$ brew install node&lt;/p&gt;
+&lt;p&gt;Step2 安装Git&lt;/p&gt;
+&lt;p&gt;在终端中输入 git —version, 发现已经安装&lt;/p&gt;
+&lt;p&gt;Step3 安装Hexo&lt;/p&gt;
+&lt;p&gt;$ npm install -g hexo-cli&lt;/p&gt;
+&lt;p&gt;什么是npm？&lt;br&gt;npm是Nodejs下的包管理器，Use npm to install, share, and distribute code; manage dependencies in your projects; and share &amp;amp; receive feedback with others.&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 Ryan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
