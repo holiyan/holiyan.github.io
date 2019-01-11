@@ -1179,6 +1179,15 @@ article .content .caption {
     content: "|";
   }
 }
+.content p {
+  margin: 0;
+}
+blockquote {
+  font-weight: 400 !important;
+}
+blockquote:before {
+  font-size: 1.5rem !important;
+}
 #archive .post-list {
   padding: 0;
 }
@@ -1491,5 +1500,30 @@ code {
   height: 22px;
 }
 .post-excerpt {
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
+}
+#toc .toc-level-2:before {
+  content: "" !important;
+}
+.content h2:before {
+  content: "" !important;
+}
+blockquote {
+  margin: 1rem 10px;
+  padding: 0.5em 10px;
+  background: inherit;
+  color: #2bbc8a;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  font-weight: bold;
+}
+blockquote p {
+  margin: 0;
+}
+blockquote:before {
+  margin-right: 0.25em;
+  color: #2bbc8a;
+  content: "\201C";
+  vertical-align: -0.4em;
+  font-size: 2em;
+  line-height: 0.1em;
 }
