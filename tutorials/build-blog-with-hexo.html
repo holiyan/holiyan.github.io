@@ -17,7 +17,7 @@
 <meta property="og:image" content="http://yoursite.com/tutorials/build-blog-with-hexo/Hexo%20建站流程.png">
 <meta property="og:image" content="http://yoursite.com/tutorials/build-blog-with-hexo/首页文章列表.png">
 <meta property="og:image" content="http://yoursite.com/tutorials/build-blog-with-hexo/personal%20domain.png">
-<meta property="og:updated_time" content="2019-01-14T08:04:57.894Z">
+<meta property="og:updated_time" content="2019-01-15T03:48:27.243Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用 Hexo 搭建个人网站">
 <meta name="twitter:description" content="一直想搭建自己的个人网站，前些天了解了 Hexo 建站大法，捯饬了一番竟然成功了，记录过程以免大家重复趟坑。我所用的设备是 Mac ，网站部署至 github 和 阿里云虚拟主机。 Hexo 建站流程使用 Hexo 没有其它原因，只是相对方便，并且搭出来的网站效果不错。官方对 Hexo 的解释是：  Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析">
@@ -116,7 +116,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-建站流程"><span class="toc-number">1.</span> <span class="toc-text">Hexo 建站流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、安装并初始化-hexo"><span class="toc-number">2.</span> <span class="toc-text">一、安装并初始化 hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、配置主题"><span class="toc-number">3.</span> <span class="toc-text">二、配置主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#更换主题"><span class="toc-number">3.1.</span> <span class="toc-text">更换主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义主题"><span class="toc-number">3.2.</span> <span class="toc-text">自定义主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、写文章"><span class="toc-number">4.</span> <span class="toc-text">三、写文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、部署至服务器"><span class="toc-number">5.</span> <span class="toc-text">四、部署至服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#部署至-github"><span class="toc-number">5.1.</span> <span class="toc-text">部署至 github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署至阿里云虚拟主机"><span class="toc-number">5.2.</span> <span class="toc-text">部署至阿里云虚拟主机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、域名配置"><span class="toc-number">6.</span> <span class="toc-text">五、域名配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">7.</span> <span class="toc-text">总结</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-建站流程"><span class="toc-number">1.</span> <span class="toc-text">Hexo 建站流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、安装并初始化-hexo"><span class="toc-number">2.</span> <span class="toc-text">一、安装并初始化 hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、配置主题"><span class="toc-number">3.</span> <span class="toc-text">二、配置主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#更换主题"><span class="toc-number">3.1.</span> <span class="toc-text">更换主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义主题"><span class="toc-number">3.2.</span> <span class="toc-text">自定义主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、写文章"><span class="toc-number">4.</span> <span class="toc-text">三、写文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、生成静态文件"><span class="toc-number">5.</span> <span class="toc-text">四、生成静态文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、部署至服务器"><span class="toc-number">6.</span> <span class="toc-text">五、部署至服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#部署至-github"><span class="toc-number">6.1.</span> <span class="toc-text">部署至 github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署至阿里云虚拟主机"><span class="toc-number">6.2.</span> <span class="toc-text">部署至阿里云虚拟主机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、域名配置"><span class="toc-number">7.</span> <span class="toc-text">六、域名配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">8.</span> <span class="toc-text">总结</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -193,7 +193,7 @@
 <p>以下通过修改首页内容和CSS样式简单说下如何自定义主题。</p>
 <p>1 自定义内容<br>由于我所选择的主题首页只显示了文章标题，如下面这样：</p>
 <p><img src="/tutorials/build-blog-with-hexo/首页文章列表.png" width="300" align="left"></p>
-<p>我想在标题下面增加文章摘录怎么办呢？既然layout文件夹决定网页内容呈现方式，那么只需要打开决定首页内容生成的index.ejs文件（有些主题可能名称不一样），找到标题对应的代码，在下面增加文章摘录即可。</p>
+<p>但标题能传达的信息太少了，不能达到吸引访客点击的目的，现在我想在标题下面增加文章摘录怎么办呢？既然 layout 文件夹决定网页内容呈现方式，那么只需找到对应的文件并修改配置就可以了。我的主题中首页内容是由 layout 文件中的 index.ejs 文件（有些主题可能不一样）决定的，找到文件中标题对应的代码，在下面增加文章摘录即可。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;% show_posts.each(function(post, i)&#123; %&gt;</span><br><span class="line">      &lt;li class=&quot;post-item&quot;&gt;</span><br><span class="line">        &lt;span class=&quot;h1&quot;&gt;&lt;%- partial(&apos;_partial/post/title&apos;, &#123; post: post, index: true, class_name: &apos;&apos; &#125;) %&gt;&lt;/span&gt;</span><br><span class="line">        &lt;%- partial(&apos;_partial/post/date&apos;, &#123; post: post, class_name: &apos;meta&apos; &#125;) %&gt;</span><br><span class="line">        &lt;%# 在此处增加摘录 %&gt;</span><br><span class="line">      &lt;/li&gt;</span><br><span class="line">    &lt;% &#125;); %&gt;</span><br></pre></td></tr></table></figure>
 <p>目的明确了，位置也找到了，那填写什么代码呢？这就要用到变量了。hexo 提供了很多变量，通过输入变量就可直接调用网站或文章中的对应内容。比如通过 excerpt 变量可调用摘录 ，那我只需在将上面的注释处的内容替换为 &lt;% post.excerpt %&gt; 就可以在每篇文章标题下显示摘录了。需要注意的是，excerpt 变量调用摘录需要在文章中添加一个 <!-- more --> 标记，post.excerpt 将会获取到标记之前的内容。没有这个标记就无法获取内容。<br>同样的，使用 post.content 可显示文章的全部内容。如果只需显示内容中的前300个字也可以，对内容限制下长度就行，如下所示：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%- truncate(strip_html(post.content), &#123;length: 300, omission: &apos;...&apos;&#125;) %&gt;</span><br></pre></td></tr></table></figure>
@@ -205,7 +205,41 @@
 <p>到这儿你可能会疑惑，post和page之间有什么区别？我从实践得出的结论是，所有文章格式都是post，你所创建的post会出现在archive（归档）列表中，而page是则不会出现在文章列表中，它是像about这样单独的页面。</p>
 <p>创建文件还有很多细节可以定义，比如tags, date等，因为我了解不深这里就不细说了，以后遇到再细说。</p>
 <p>此外，由于 hexo 文章都是用markdown语法写的，有必要了解一下相关语法。至于编辑器，我用的是 Typora，感兴趣的可以下载试试。</p>
-<h2 id="四、部署至服务器"><a href="#四、部署至服务器" class="headerlink" title="四、部署至服务器"></a>四、部署至服务器</h2><p>执行了 hexo g 之后就会在 public 文件夹中生成网站的静态网页，要让其他人也能访问我们的网站，我们需要将这些网页部署（上传）至远程服务器。<br>目前我了解到的常用远程服务器有两种：github 服务器和腾讯云/阿里云服务器。由于我之前强迫症犯了没忍住在阿里云上买了云虚拟主机，所以两者均需部署，下面我分别记录下部署过程。</p>
+<h2 id="四、生成静态文件"><a href="#四、生成静态文件" class="headerlink" title="四、生成静态文件"></a>四、生成静态文件</h2><p>前面已经提过如何在 hexo 生成静态页面，即执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+<p>如果想先将public文件夹中的内容删干净再生成，可以先执行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
+<p>再重新生成页面。</p>
+<p>此外，这里我想大概提下生成静态页面的原理。安装了 Hexo，然后我们就可以看到文档结构如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">. </span><br><span class="line">├── _config.yml // 站点配置文件 </span><br><span class="line">├── db.json // 缓存文件 </span><br><span class="line">├── node_modules // 安装的插件以及hexo所需的一些nodejs模块 </span><br><span class="line">├── package.json // 项目的依赖文件 </span><br><span class="line">├── scaffolds // 模版文件 </span><br><span class="line">├── source // 源文件，用来存放你的文章 md 文件 </span><br><span class="line">└── themes // 主题文件</span><br></pre></td></tr></table></figure>
+<p>Hexo 生成 html 的过程可以描述为：html = 规则（模板 + 数据）。如上所示，模板是由theme文件定义的，而数据则由source文件夹中的文件提供。hexo 从 markdown 到 html 的 generate 过程中做了两次模板渲染，只是两次渲染的输入、渲染模板的引擎、输出不一样。具体如下： </p>
+<table>
+<thead>
+<tr>
+<th>渲染过程</th>
+<th>输入</th>
+<th>模板引擎</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First</td>
+<td>source中的文件</td>
+<td>yml和markdown</td>
+<td>article对象(title,date,tags,etc)</td>
+</tr>
+<tr>
+<td>Second</td>
+<td>article对象和themes中的文件</td>
+<td>layouts目录下ejs/jade等文件</td>
+<td>public中的文件</td>
+</tr>
+</tbody>
+</table>
+<p>用文字描述就是，第一次渲染时，hexo 根据 scource 中的 md 文件产生一个 article 对象，并给这个对象添加 title, content 等属性（其中 article.title, article.date, article.tags, article.categories等来自yml front的部分，article.content 是 markdown 文章解析后的 html 片段）。 </p>
+<p>第二次渲染，需要引入对应模板文件格式的插件，如 .ejs 文件就需要使用 hexo-render-ejs 插件，.jade文件需要使用 hexo-render-jade 插件，而 .sass 文件则需要 hexo-render-sass 插件来转换成css文件。  </p>
+<h2 id="五、部署至服务器"><a href="#五、部署至服务器" class="headerlink" title="五、部署至服务器"></a>五、部署至服务器</h2><p>执行了 hexo g 之后就会在 public 文件夹中生成网站的静态网页，要让其他人也能访问我们的网站，我们需要将这些网页部署（上传）至远程服务器。<br>目前我了解到的常用远程服务器有两种：github 服务器和腾讯云/阿里云服务器。由于我之前强迫症犯了没忍住在阿里云上买了云虚拟主机，所以两者均需部署，下面我分别记录下部署过程。</p>
 <h3 id="部署至-github"><a href="#部署至-github" class="headerlink" title="部署至 github"></a>部署至 github</h3><p>1 安装所需插件<br>部署至github需要提前安装工具 hexo-deployer-git ，使用npm安装即可：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
 <p>2 配置_config.yml文件<br>在配置文件_config.yml 中添加github的地址：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  - type: git</span><br><span class="line">    repo: https://github.com/yourname/your-repository.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure></p>
 <p>3 设置git用户名和邮箱<br>这个步骤我并不确定是否必须，为了保险我也进行了设置。引用<a href="https://blog.csdn.net/shuyin007/article/details/78083552" target="_blank" rel="noopener">Git设置用户名和邮箱</a>中的解释如下：</p>
@@ -220,7 +254,7 @@
 <p>1 安装 hexo-deployer-ftpsync<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-ftpsync --save</span><br></pre></td></tr></table></figure></p>
 <p>2 修改配置文件_config.yml<br>修改之后配置项大概长这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">- type: git</span><br><span class="line">  repo: https://github.com/yourname/your-repository.git</span><br><span class="line">  branch: master</span><br><span class="line">- type: ftpsync</span><br><span class="line">  host: 88.88.88.88  // ftp服务器地址</span><br><span class="line">  user: hostname  // ftp用户名</span><br><span class="line">  pass: ******   // ftp用户密码</span><br><span class="line">  remote: /htdocs    // 阿里云服务器一般在 /htdocs下面</span><br><span class="line">  port: 21    // ftp端口，不同的ftp可能会不一样</span><br><span class="line">  delete: true    // 上传本地文件是否删除ftp中的所有文件</span><br><span class="line">  verbose: true    // 是否打印调试信息</span><br><span class="line">  ignore_errors: false    // 是否忽略错误</span><br></pre></td></tr></table></figure></p>
 <p>3 部署<br>配置完之后，只需执行 hexo d，网页可同时部署至 github 和阿里云云虚拟主机。</p>
-<h2 id="五、域名配置"><a href="#五、域名配置" class="headerlink" title="五、域名配置"></a>五、域名配置</h2><p>如果对域名没要求，直接用 github page 做域名也可以。如果想用自己的域名，那也只需要两步就可搞定：</p>
+<h2 id="六、域名配置"><a href="#六、域名配置" class="headerlink" title="六、域名配置"></a>六、域名配置</h2><p>如果对域名没要求，直接用 github page 做域名也可以。如果想用自己的域名，那也只需要两步就可搞定：</p>
 <p>1.购买域名<br>具体操作网上一大堆资料，我就不多说了。一点建议是，刚接触博客就别购买太贵的域名了，毕竟多数人折腾博客纯属自娱自乐，又没多大流量。</p>
 <p>2.域名解析<br>购买了自己的域名，需要将该域名解析至我们的服务器。如果我们用的服务器是 github ，在存放网站的 repositories 下的 setting 页面中，找到 github pages ，在 custom domain 中填上自己的域名并保存即可。</p>
 <p><img src="/tutorials/build-blog-with-hexo/personal domain.png" alt="personal domain"></p>
@@ -251,7 +285,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-建站流程"><span class="toc-number">1.</span> <span class="toc-text">Hexo 建站流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、安装并初始化-hexo"><span class="toc-number">2.</span> <span class="toc-text">一、安装并初始化 hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、配置主题"><span class="toc-number">3.</span> <span class="toc-text">二、配置主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#更换主题"><span class="toc-number">3.1.</span> <span class="toc-text">更换主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义主题"><span class="toc-number">3.2.</span> <span class="toc-text">自定义主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、写文章"><span class="toc-number">4.</span> <span class="toc-text">三、写文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、部署至服务器"><span class="toc-number">5.</span> <span class="toc-text">四、部署至服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#部署至-github"><span class="toc-number">5.1.</span> <span class="toc-text">部署至 github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署至阿里云虚拟主机"><span class="toc-number">5.2.</span> <span class="toc-text">部署至阿里云虚拟主机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、域名配置"><span class="toc-number">6.</span> <span class="toc-text">五、域名配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">7.</span> <span class="toc-text">总结</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-建站流程"><span class="toc-number">1.</span> <span class="toc-text">Hexo 建站流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、安装并初始化-hexo"><span class="toc-number">2.</span> <span class="toc-text">一、安装并初始化 hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、配置主题"><span class="toc-number">3.</span> <span class="toc-text">二、配置主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#更换主题"><span class="toc-number">3.1.</span> <span class="toc-text">更换主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义主题"><span class="toc-number">3.2.</span> <span class="toc-text">自定义主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、写文章"><span class="toc-number">4.</span> <span class="toc-text">三、写文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、生成静态文件"><span class="toc-number">5.</span> <span class="toc-text">四、生成静态文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、部署至服务器"><span class="toc-number">6.</span> <span class="toc-text">五、部署至服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#部署至-github"><span class="toc-number">6.1.</span> <span class="toc-text">部署至 github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署至阿里云虚拟主机"><span class="toc-number">6.2.</span> <span class="toc-text">部署至阿里云虚拟主机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、域名配置"><span class="toc-number">7.</span> <span class="toc-text">六、域名配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">8.</span> <span class="toc-text">总结</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
