@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="故事的开始有一天，策划拉了个板凳坐在你旁边，对你说：我们打算做个在线预订运动场馆的app，原型图我大概画了一下，你看bulabula…你负责给咱设计一下呗？这时候你大概率是个黑人问号脸，你有很多疑惑，比如：这个需求是高频的吗？非得做个app才能解决问题吗？用户会不会嫌在线预订太麻烦？app啥时候上线，开发人员是谁？… 你和策划讨论了好几个回合，稿子改了好几遍，终于等到产品上线，却发现结果和最初设想">
+<meta name="keywords" content="产品设计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何应对产品设计中的不确定性">
+<meta property="og:url" content="http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html">
+<meta property="og:site_name" content="造物之旅">
+<meta property="og:description" content="故事的开始有一天，策划拉了个板凳坐在你旁边，对你说：我们打算做个在线预订运动场馆的app，原型图我大概画了一下，你看bulabula…你负责给咱设计一下呗？这时候你大概率是个黑人问号脸，你有很多疑惑，比如：这个需求是高频的吗？非得做个app才能解决问题吗？用户会不会嫌在线预订太麻烦？app啥时候上线，开发人员是谁？… 你和策划讨论了好几个回合，稿子改了好几遍，终于等到产品上线，却发现结果和最初设想">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-01-16T02:25:40.860Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="如何应对产品设计中的不确定性">
+<meta name="twitter:description" content="故事的开始有一天，策划拉了个板凳坐在你旁边，对你说：我们打算做个在线预订运动场馆的app，原型图我大概画了一下，你看bulabula…你负责给咱设计一下呗？这时候你大概率是个黑人问号脸，你有很多疑惑，比如：这个需求是高频的吗？非得做个app才能解决问题吗？用户会不会嫌在线预订太麻烦？app啥时候上线，开发人员是谁？… 你和策划讨论了好几个回合，稿子改了好几遍，终于等到产品上线，却发现结果和最初设想">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>如何应对产品设计中的不确定性</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2019/01/project-netease-sight.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html&text=如何应对产品设计中的不确定性"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html&title=如何应对产品设计中的不确定性"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html&is_video=false&description=如何应对产品设计中的不确定性"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=如何应对产品设计中的不确定性&body=Check out this article: http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html&title=如何应对产品设计中的不确定性"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html&title=如何应对产品设计中的不确定性"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html&title=如何应对产品设计中的不确定性"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html&title=如何应对产品设计中的不确定性"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html&name=如何应对产品设计中的不确定性&description=&lt;h2 id=&#34;故事的开始&#34;&gt;&lt;a href=&#34;#故事的开始&#34; class=&#34;headerlink&#34; title=&#34;故事的开始&#34;&gt;&lt;/a&gt;故事的开始&lt;/h2&gt;&lt;p&gt;有一天，策划拉了个板凳坐在你旁边，对你说：我们打算做个在线预订运动场馆的app，原型图我大概画了一下，你看bulabula…你负责给咱设计一下呗？这时候你大概率是个黑人问号脸，你有很多疑惑，比如：&lt;br&gt;这个需求是高频的吗？&lt;br&gt;非得做个app才能解决问题吗？&lt;br&gt;用户会不会嫌在线预订太麻烦？&lt;br&gt;app啥时候上线，开发人员是谁？&lt;br&gt;…&lt;/p&gt;
+&lt;p&gt;你和策划讨论了好几个回合，稿子改了好几遍，终于等到产品上线，却发现结果和最初设想的差别很大。这个过程中发生了什么？？？很多因素可能导致结果和预期不一致，比如：&lt;br&gt;用户需求模糊；&lt;br&gt;需求变更导致设计返工；&lt;br&gt;用户不喜欢产品的解决方案；&lt;br&gt;方案实现难度太大；&lt;br&gt;…&lt;br&gt;作为设计师，我们理应在项目启动之初尽可能预测不确定性，并致力于消除可能的风险。但目前大多数人是被动应对不确定性，能避免就避免，避免不了，遇到问题再去解决问题。&lt;/p&gt;
+&lt;h2 id=&#34;错误的应对方法&#34;&gt;&lt;a href=&#34;#错误的应对方法&#34; class=&#34;headerlink&#34; title=&#34;错误的应对方法&#34;&gt;&lt;/a&gt;错误的应对方法&lt;/h2&gt;&lt;p&gt;以下是工作中常见的应对不确定性的错误方法：&lt;/p&gt;
+&lt;p&gt;1 凡事都按照最完美的情况假设&lt;br&gt;比如很多视觉设计师喜欢美化视觉稿，用一些很fancy的产品图来配设计稿，评审的时候发现不了问题，等到上线换上真实的产品图才发现视觉上的问题。&lt;/p&gt;
+&lt;p&gt;2 盲目相信他人所传递的信息&lt;br&gt;传递信息的人有时会夹杂私货，比如你做了一个实现起来很复杂的控件，你向开发征求这个能不能做，如果开发不能充分理解你这样做的背景，他可能将一个“能实现但需要一些时间”的回答传递为“这个做不了”。&lt;br&gt;&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#故事的开始"><span class="toc-number">1.</span> <span class="toc-text">故事的开始</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#错误的应对方法"><span class="toc-number">2.</span> <span class="toc-text">错误的应对方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是不确定性"><span class="toc-number">3.</span> <span class="toc-text">什么是不确定性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#合理的应对方法"><span class="toc-number">4.</span> <span class="toc-text">合理的应对方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#STEP1-确定期望"><span class="toc-number">4.1.</span> <span class="toc-text">STEP1 确定期望</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STEP2-列举不确定性因素"><span class="toc-number">4.2.</span> <span class="toc-text">STEP2 列举不确定性因素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STEP3-收集信息"><span class="toc-number">4.3.</span> <span class="toc-text">STEP3 收集信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STEP4-基于所获取的信息确定应对预案"><span class="toc-number">4.4.</span> <span class="toc-text">STEP4 基于所获取的信息确定应对预案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结论"><span class="toc-number">5.</span> <span class="toc-text">结论</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        如何应对产品设计中的不确定性
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <span itemprop="name">造物之旅</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-01-15T07:20:45.000Z" itemprop="datePublished">2019-01-15</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/产品设计/">产品设计</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="故事的开始"><a href="#故事的开始" class="headerlink" title="故事的开始"></a>故事的开始</h2><p>有一天，策划拉了个板凳坐在你旁边，对你说：我们打算做个在线预订运动场馆的app，原型图我大概画了一下，你看bulabula…你负责给咱设计一下呗？这时候你大概率是个黑人问号脸，你有很多疑惑，比如：<br>这个需求是高频的吗？<br>非得做个app才能解决问题吗？<br>用户会不会嫌在线预订太麻烦？<br>app啥时候上线，开发人员是谁？<br>…</p>
+<p>你和策划讨论了好几个回合，稿子改了好几遍，终于等到产品上线，却发现结果和最初设想的差别很大。这个过程中发生了什么？？？很多因素可能导致结果和预期不一致，比如：<br>用户需求模糊；<br>需求变更导致设计返工；<br>用户不喜欢产品的解决方案；<br>方案实现难度太大；<br>…<br>作为设计师，我们理应在项目启动之初尽可能预测不确定性，并致力于消除可能的风险。但目前大多数人是被动应对不确定性，能避免就避免，避免不了，遇到问题再去解决问题。</p>
+<h2 id="错误的应对方法"><a href="#错误的应对方法" class="headerlink" title="错误的应对方法"></a>错误的应对方法</h2><p>以下是工作中常见的应对不确定性的错误方法：</p>
+<p>1 凡事都按照最完美的情况假设<br>比如很多视觉设计师喜欢美化视觉稿，用一些很fancy的产品图来配设计稿，评审的时候发现不了问题，等到上线换上真实的产品图才发现视觉上的问题。</p>
+<p>2 盲目相信他人所传递的信息<br>传递信息的人有时会夹杂私货，比如你做了一个实现起来很复杂的控件，你向开发征求这个能不能做，如果开发不能充分理解你这样做的背景，他可能将一个“能实现但需要一些时间”的回答传递为“这个做不了”。<br><a id="more"></a> </p>
+<p>3 主观猜测用户需求<br>用户的需求很难坐在办公室里想出来，与场景和业务相关性大的B端产品就更难用看文献或推理的方式构思了，但实际工作中这样做的人并不少。</p>
+<p>4 刻意回避不确定因素<br>我们有时会为了快速上线回避小的风险，大多数情况这样做不会带来致命危险，但回避某些关键问题可能给产品带来致命伤害。还记的三星Galaxy Note 7自燃事件吗？激进的三星工程师们为了尽可能扩大电池容量并减小机身尺寸，忽略了充电时电池膨胀受电池仓压迫可能带来的风险，最终使得三星召回了250万台手机。</p>
+<p>以上都是错误的应对方式，接下来我们聊聊什么是正确的应对方法。回答这个问题之前，我们稍微追根究底一下，即：到底什么是不确定性？</p>
+<h2 id="什么是不确定性"><a href="#什么是不确定性" class="headerlink" title="什么是不确定性"></a>什么是不确定性</h2><blockquote>
+<p>Uncertainty is a situation which involves imperfect or unknown information.<br>-Wikipidea</p>
+</blockquote>
+<p>从维基百科对不确定性的定义可看出，不确定性常常与两个因素有关：imperfect和unknown information。imperfect在这里的意思并不是“不完美的”，而是“进行中的、未完成的”。这也不难理解，发展中的事物不确定性更高。比如快手在2013年刚刚转型做社区时是“imperfect”的，它的不确定性很高。等到现在发展停滞了，不确定性也就低了，它也很难撕下“逗逼青年欢乐多”、“low”这样的标签了。unknown information即缺乏信息，缺乏信息导致不确定性，也很好理解。比如策划说“帮我们把logo优化一下”，这里面就缺乏了诸如原来的logo有什么问题、新的logo要满足哪些要求等信息。</p>
+<p>从这两个因素出发，我们不难归纳出一种应对不确定性的步骤。</p>
+<h2 id="合理的应对方法"><a href="#合理的应对方法" class="headerlink" title="合理的应对方法"></a>合理的应对方法</h2><p>既然不确定性与发展阶段和缺乏信息有关，结合产品设计过程和设计目标，我们不难得出以下应对思路：首先基于当前产品阶段确定我们的望值，然后列举影响期望达成的不确定性因素，并针对这些因素尽可能多地收集相关信息，最后基于相关信息确定应对预案。</p>
+<h3 id="STEP1-确定期望"><a href="#STEP1-确定期望" class="headerlink" title="STEP1 确定期望"></a>STEP1 确定期望</h3><p>既然不确定性会导致结果不可控，那么解决不确定性首先得明确我们想达到的结果，即期望。假设产品还未上线，那我们起码希望产品能达成以下期望：</p>
+<p>需求的来源是真实可靠的<br>用户乐于接受产品所提供的解决方案<br>方案能够被开发很好地还原<br>产品能够顺利上线<br>…</p>
+<p>确定期望后，下一步需要分析达到期望的过程可能有哪些不确定因素，并将它们列举出来。</p>
+<h3 id="STEP2-列举不确定性因素"><a href="#STEP2-列举不确定性因素" class="headerlink" title="STEP2 列举不确定性因素"></a>STEP2 列举不确定性因素</h3><p>拿上个步骤中的“用户乐于接受产品所提供的解决方案”这个期望来说，可能的不确定因素有：</p>
+<p>1 用户可能因首次使用成本高而不愿尝试<br>产品收费太高、安装包太大、注册太繁琐，甚至logo太丑都会降低用户首次尝试产品的意愿。</p>
+<p>2 用户可能因担心隐私/安全等问题不愿使用产品<br>我们的产品也许对用户有用，但有时用户会在使用产品前有很多顾虑。拿给小孩用的3D打印笔来说，父母可能会担心它的材料是否安全、打印过程是否有异味、是否有辐射等。</p>
+<p>3 用户可能觉得产品对自己帮助不大<br>比如一些saas产品，虽然看起来功能强大，但对用户真正有用的功能却很少，因此用户的续费意愿往往较低。</p>
+<p>4 产品操作可能使用过于复杂<br>产品设计师们喜欢产品立项之初就奔着“人无我有，人有我全”的目标去做，但这往往会让产品操作过于复杂，用户接受意愿降低。</p>
+<p>以上只是达成某一个期望过程中可能的不确定因素，期望不同遇到的不确定性就不同。分析这些不确定性仍然大多依赖经验，所谓踩的坑多了，自然就知道哪里有坑了。如果刚入职场没有相关经验，可以多向周围老鸟们请教，让他们多提一些问题，风险点可能就在他们的问题中。</p>
+<h3 id="STEP3-收集信息"><a href="#STEP3-收集信息" class="headerlink" title="STEP3 收集信息"></a>STEP3 收集信息</h3><blockquote>
+<p>“信息就是用来消除不确定性的东西”。——香农</p>
+</blockquote>
+<p>即然不确定性往往由缺乏信息导致，那就需要从外部获取信息来进行消除。举个栗子，如果我们所设计的app是个startup项目，不知道app的设计风格应该是小清新的、孟菲斯的、还是极简的，这时候如果我们能够获得用户特征或产品定位等约束信息，那么设计风格的选择范围就会大幅缩小，我们面临的不确定性也就更低了。</p>
+<p>在上个步骤我们列出了可能影响“用户乐于接受产品所提供的解决方案”这个期望达成的不确定性因素，接下来需要尽可能多地从市场、用户、上下游收集相关信息。具体示例如下。</p>
+<p><strong>1 用户可能因首次使用成本高而不愿尝试</strong><br>在方案确定阶段，我们可以询问目标用户，如果软件收费8000元/年，他们是否愿意付费？是否愿意在没有wifi时下一个100M的app去解决他们的问题？让用户填一下注册表单，看他们会不会感到困惑和烦躁？</p>
+<p><strong>2 用户可能因担心隐私/安全等问题不愿使用产品</strong><br>为了了解用户的担忧，我们可以将idea讲给用户，听听用户对哪些地方有疑问；可以将demo展示给用户，看用户有没有兴趣使用；我们也可以用众筹的形式开始项目，从众筹网站上了解用户的顾虑。</p>
+<p><strong>3 用户可能觉得产品对自己帮助不大</strong><br>如果不确定产品的价值，那就做更多的调研，深入了解用户的痛点在什么地方，思考我们的产品能在多大程度上帮用户解决问题？同时还需要注意，产品在帮用户解决问题的时候是否给用户带来了其它的麻烦？</p>
+<p><strong>4 产品操作可能使用过于复杂</strong><br>我们不仅需要反复试用自己的产品，还需要请周围的人试用产品，看看核心功能的操作流程是否顺畅？有没有冗余的功能或操作步骤？</p>
+<p>以上过程可能看起来和传统的用户调研一样，但有仍然有些许差别。传统的用研往往并不针对某个具体的问题，而这里的收集信息主要为了解决某个困惑/风险点，因此更加的有针对性。此外，传统的用研主要针对用户，而这里针对的范围更加广泛，包括了来自stakeholder、上下游、市场等多个方面，根据要解决的问题不同而不同。</p>
+<h3 id="STEP4-基于所获取的信息确定应对预案"><a href="#STEP4-基于所获取的信息确定应对预案" class="headerlink" title="STEP4 基于所获取的信息确定应对预案"></a>STEP4 基于所获取的信息确定应对预案</h3><p>获取了足够多的信息之后，就可以根据所收集的信息确定因对预案了。从收集的信息到产生应对方案，还需考虑信息的相关度、权重等因素，这里就不再深入阐述。拿文章开头处的预订运动场馆app这个需求来说，如果我们收集了市场和用户的信息后发现用户的需求频次很低，那么我们可能并不需要开发一个app，用小程序就可以解决问题。同样以预订运动场馆app举例，针对“需求的来源是真实可靠的”这个期望，完成以上四个步骤并对过程进行整理，可能会得到如下列表。创建并维护这样的列表能帮助我们全面考虑产品生命周期面临的风险点，并提醒我们尽早化解。</p>
+<table>
+<thead>
+<tr>
+<th>期望</th>
+<th>不确定性因素</th>
+<th>相关信息</th>
+<th>应对预案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>需求的来源是真实可靠的</td>
+<td>用户可能因首次使用成本高而不愿尝试</td>
+<td>用户不愿意为了预订场馆下载app</td>
+<td>用小程序验证市场需求</td>
+</tr>
+<tr>
+<td>用户可能因担心隐私/安全等问题不愿使用产品</td>
+<td>部分用户担心用手机号注册后会收到营销短信打扰</td>
+<td>考虑用户手机号对商家隐藏</td>
+<td>…</td>
+</tr>
+<tr>
+<td>用户可能觉得产品对自己帮助不大</td>
+<td>用户更加希望用来查询附近场馆的收费等信息</td>
+<td>确定运营策略以吸引商家参与</td>
+<td>…</td>
+</tr>
+<tr>
+<td>产品操作可能使用过于复杂</td>
+<td>用户使用Demo的过程中不知道如何取消预订</td>
+<td>让Demo更易用使用</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>墨菲定律告诉我们，考虑到用户的多样性和产品的长远发展，如果产品有出错的可能，那就迟早会出错。在产品设计初期如果对不确定性预估不足，小则导致设计反工、上线延迟，大则可能为产品发展埋下安全隐患，因此我们需要树立起风险意识。本文从导致不确定性的因素出发，提供了一种因对产品设计中不确定性的思路，即：通过确定我们的期望值，分析达成期望所遇到的不确定因素，然后收集相关信息，最终做出对产品发展最有利的决策。</p>
+<p>因个人经验和视野局限，文中不足之处请大家谅解，希望能给大家带来一点点启发。</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#故事的开始"><span class="toc-number">1.</span> <span class="toc-text">故事的开始</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#错误的应对方法"><span class="toc-number">2.</span> <span class="toc-text">错误的应对方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是不确定性"><span class="toc-number">3.</span> <span class="toc-text">什么是不确定性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#合理的应对方法"><span class="toc-number">4.</span> <span class="toc-text">合理的应对方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#STEP1-确定期望"><span class="toc-number">4.1.</span> <span class="toc-text">STEP1 确定期望</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STEP2-列举不确定性因素"><span class="toc-number">4.2.</span> <span class="toc-text">STEP2 列举不确定性因素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STEP3-收集信息"><span class="toc-number">4.3.</span> <span class="toc-text">STEP3 收集信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#STEP4-基于所获取的信息确定应对预案"><span class="toc-number">4.4.</span> <span class="toc-text">STEP4 基于所获取的信息确定应对预案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结论"><span class="toc-number">5.</span> <span class="toc-text">结论</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html&text=如何应对产品设计中的不确定性"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html&title=如何应对产品设计中的不确定性"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html&is_video=false&description=如何应对产品设计中的不确定性"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=如何应对产品设计中的不确定性&body=Check out this article: http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html&title=如何应对产品设计中的不确定性"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html&title=如何应对产品设计中的不确定性"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html&title=如何应对产品设计中的不确定性"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html&title=如何应对产品设计中的不确定性"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/01/how-to-eliminate-uncertainties.html&name=如何应对产品设计中的不确定性&description=&lt;h2 id=&#34;故事的开始&#34;&gt;&lt;a href=&#34;#故事的开始&#34; class=&#34;headerlink&#34; title=&#34;故事的开始&#34;&gt;&lt;/a&gt;故事的开始&lt;/h2&gt;&lt;p&gt;有一天，策划拉了个板凳坐在你旁边，对你说：我们打算做个在线预订运动场馆的app，原型图我大概画了一下，你看bulabula…你负责给咱设计一下呗？这时候你大概率是个黑人问号脸，你有很多疑惑，比如：&lt;br&gt;这个需求是高频的吗？&lt;br&gt;非得做个app才能解决问题吗？&lt;br&gt;用户会不会嫌在线预订太麻烦？&lt;br&gt;app啥时候上线，开发人员是谁？&lt;br&gt;…&lt;/p&gt;
+&lt;p&gt;你和策划讨论了好几个回合，稿子改了好几遍，终于等到产品上线，却发现结果和最初设想的差别很大。这个过程中发生了什么？？？很多因素可能导致结果和预期不一致，比如：&lt;br&gt;用户需求模糊；&lt;br&gt;需求变更导致设计返工；&lt;br&gt;用户不喜欢产品的解决方案；&lt;br&gt;方案实现难度太大；&lt;br&gt;…&lt;br&gt;作为设计师，我们理应在项目启动之初尽可能预测不确定性，并致力于消除可能的风险。但目前大多数人是被动应对不确定性，能避免就避免，避免不了，遇到问题再去解决问题。&lt;/p&gt;
+&lt;h2 id=&#34;错误的应对方法&#34;&gt;&lt;a href=&#34;#错误的应对方法&#34; class=&#34;headerlink&#34; title=&#34;错误的应对方法&#34;&gt;&lt;/a&gt;错误的应对方法&lt;/h2&gt;&lt;p&gt;以下是工作中常见的应对不确定性的错误方法：&lt;/p&gt;
+&lt;p&gt;1 凡事都按照最完美的情况假设&lt;br&gt;比如很多视觉设计师喜欢美化视觉稿，用一些很fancy的产品图来配设计稿，评审的时候发现不了问题，等到上线换上真实的产品图才发现视觉上的问题。&lt;/p&gt;
+&lt;p&gt;2 盲目相信他人所传递的信息&lt;br&gt;传递信息的人有时会夹杂私货，比如你做了一个实现起来很复杂的控件，你向开发征求这个能不能做，如果开发不能充分理解你这样做的背景，他可能将一个“能实现但需要一些时间”的回答传递为“这个做不了”。&lt;br&gt;&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 Ryan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+

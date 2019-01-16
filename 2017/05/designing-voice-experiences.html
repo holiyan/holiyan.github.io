@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="语音界面正变的越来越普遍。虽然像Siri和Cortana这样的语音助手已经出现好几年了，但最近这段时间Amazon和Google的语音驱动设备正将它们带入千家万户。 近期VoiceLabs的预测表明2017年语音驱动设备的出货量将达到2450万，几乎是去年的四倍。作为用户体验设计师，现在我们有机会设计语音体验了！ 语音界面虽不同于传统界面，但这并不是说我们就可以抛弃在传统界面设计中所积累的经验。我">
+<meta name="keywords" content="语音交互">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【译】设计语音体验">
+<meta property="og:url" content="http://yoursite.com/2017/05/designing-voice-experiences.html">
+<meta property="og:site_name" content="造物之旅">
+<meta property="og:description" content="语音界面正变的越来越普遍。虽然像Siri和Cortana这样的语音助手已经出现好几年了，但最近这段时间Amazon和Google的语音驱动设备正将它们带入千家万户。 近期VoiceLabs的预测表明2017年语音驱动设备的出货量将达到2450万，几乎是去年的四倍。作为用户体验设计师，现在我们有机会设计语音体验了！ 语音界面虽不同于传统界面，但这并不是说我们就可以抛弃在传统界面设计中所积累的经验。我">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2017/05/designing-voice-experiences/1599322-b47198ce91780b9b.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/designing-voice-experiences/1599322-cf29b2ae50821e23.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/designing-voice-experiences/1599322-edf14d4becddbf69.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/designing-voice-experiences/1599322-6d2029b564743796.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/designing-voice-experiences/1599322-a74f62141e1aad87.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/designing-voice-experiences/1599322-30e3c9f99e1aa6fb.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/designing-voice-experiences/1599322-5f91fd1f7400eadf.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/designing-voice-experiences/1599322-94601a460a0ce1ce.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/designing-voice-experiences/1599322-f444fa7b1dd18de8.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/designing-voice-experiences/1599322-742a90f06d859a89.png">
+<meta property="og:image" content="http://yoursite.com/2017/05/designing-voice-experiences/1599322-39b863e93da45342.png">
+<meta property="og:updated_time" content="2019-01-16T03:11:57.219Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="【译】设计语音体验">
+<meta name="twitter:description" content="语音界面正变的越来越普遍。虽然像Siri和Cortana这样的语音助手已经出现好几年了，但最近这段时间Amazon和Google的语音驱动设备正将它们带入千家万户。 近期VoiceLabs的预测表明2017年语音驱动设备的出货量将达到2450万，几乎是去年的四倍。作为用户体验设计师，现在我们有机会设计语音体验了！ 语音界面虽不同于传统界面，但这并不是说我们就可以抛弃在传统界面设计中所积累的经验。我">
+<meta name="twitter:image" content="http://yoursite.com/2017/05/designing-voice-experiences/1599322-b47198ce91780b9b.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>【译】设计语音体验</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2019/01/build-blog-with-hexo.html"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/05/designing-voice-experiences.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/05/designing-voice-experiences.html&text=【译】设计语音体验"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/05/designing-voice-experiences.html&title=【译】设计语音体验"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/05/designing-voice-experiences.html&is_video=false&description=【译】设计语音体验"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=【译】设计语音体验&body=Check out this article: http://yoursite.com/2017/05/designing-voice-experiences.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/05/designing-voice-experiences.html&title=【译】设计语音体验"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/05/designing-voice-experiences.html&title=【译】设计语音体验"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/05/designing-voice-experiences.html&title=【译】设计语音体验"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/05/designing-voice-experiences.html&title=【译】设计语音体验"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/05/designing-voice-experiences.html&name=【译】设计语音体验&description=&lt;p&gt;语音界面正变的越来越普遍。虽然像Siri和Cortana这样的语音助手已经出现好几年了，但最近这段时间Amazon和Google的语音驱动设备正将它们带入千家万户。&lt;/p&gt;
+&lt;p&gt;近期VoiceLabs的预测表明2017年语音驱动设备的出货量将达到2450万，几乎是去年的四倍。作为用户体验设计师，现在我们有机会设计语音体验了！&lt;/p&gt;
+&lt;p&gt;语音界面虽不同于传统界面，但这并不是说我们就可以抛弃在传统界面设计中所积累的经验。我们需要用之前的设计流程来匹配以对话式交互和无屏幕为特征的语音驱动界面。在本文中，我们将认识语音设备的工作原理，探讨语音体验设计的步骤，并通过为Alexa设计一个语音应用（Amazon称之为Skill）来阐述这些步骤。&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#理解语音界面"><span class="toc-number">1.</span> <span class="toc-text">理解语音界面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#构建语音体验"><span class="toc-number">2.</span> <span class="toc-text">构建语音体验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设计语音体验"><span class="toc-number">3.</span> <span class="toc-text">设计语音体验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、发现"><span class="toc-number">3.1.</span> <span class="toc-text">一、发现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、定义"><span class="toc-number">3.2.</span> <span class="toc-text">二、定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、细化对话流"><span class="toc-number">3.3.</span> <span class="toc-text">三、细化对话流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、备选语描述"><span class="toc-number">3.4.</span> <span class="toc-text">四、备选语描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、优化"><span class="toc-number">3.5.</span> <span class="toc-text">五、优化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开发"><span class="toc-number">4.</span> <span class="toc-text">开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指导原则"><span class="toc-number">5.</span> <span class="toc-text">指导原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#资源"><span class="toc-number">7.</span> <span class="toc-text">资源</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        【译】设计语音体验
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <span itemprop="name">造物之旅</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2017-05-21T02:08:43.000Z" itemprop="datePublished">2017-05-21</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/语音交互/">语音交互</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>语音界面正变的越来越普遍。虽然像Siri和Cortana这样的语音助手已经出现好几年了，但最近这段时间Amazon和Google的语音驱动设备正将它们带入千家万户。</p>
+<p>近期VoiceLabs的预测表明2017年语音驱动设备的出货量将达到2450万，几乎是去年的四倍。作为用户体验设计师，现在我们有机会设计语音体验了！</p>
+<p>语音界面虽不同于传统界面，但这并不是说我们就可以抛弃在传统界面设计中所积累的经验。我们需要用之前的设计流程来匹配以对话式交互和无屏幕为特征的语音驱动界面。在本文中，我们将认识语音设备的工作原理，探讨语音体验设计的步骤，并通过为Alexa设计一个语音应用（Amazon称之为Skill）来阐述这些步骤。</p>
+<a id="more"></a>
+<h2 id="理解语音界面"><a href="#理解语音界面" class="headerlink" title="理解语音界面"></a>理解语音界面</h2><p>和手机app一样，语音交互的实现离不开以下三个层</p>
+<p><img src="/2017/05/designing-voice-experiences/1599322-b47198ce91780b9b.png" alt="img"></p>
+<ol>
+<li>语音应用（如Amazon的Skills、Actions for Google）;</li>
+<li>人工智能平台（如 Amazon Alexa, Google Assistant, Apple Siri, Microsoft Cortana）；</li>
+<li>设备（如Echo, Home, 智能手机，计算机）。</li>
+</ol>
+<p>以上三层中，下面的层对其上面的层起到支撑作用。语音应用和人工智能平台这两层都在云端而不在设备中，而语音界面则介于这两层之间。</p>
+<p>下面让我们以Alexa Jeopardy！ Skill（一款Alexa的益智问答应用）为例来一睹这三个层是怎样协同工作的。</p>
+<p><img src="/2017/05/designing-voice-experiences/1599322-cf29b2ae50821e23.png" alt="img"></p>
+<p>语音设备（如Amazon Echo和Google Home）会持续收听信息，等待唤醒语（如“Alexa…”或“OK，Google…”）以执行命令。一旦被激活，设备会将听到的语音（“我要玩Jeopardy！”） 发送到该AI平台下的云。平台结合自动语音识别（automatic speech recognition, ASR）和自然语言理解（natural language understanding, NLU）对用户的意图（打开小游戏）进行解码，并将结果传输给提供支持的应用（Alexa上的Jeopardy! J6 Skill）。应用处理请求并以文本进行回应。平台接收到文本后将其转化为语音并在设备上播放。这一过程在数秒之内完成。</p>
+<h2 id="构建语音体验"><a href="#构建语音体验" class="headerlink" title="构建语音体验"></a>构建语音体验</h2><p>去年，扎克伯格完成了开发一个能在自己家运行的简单AI的挑战。他将其命名为Jarvis并赋予了Morgan Freeman的声音。</p>
+<p><img src="/2017/05/designing-voice-experiences/1599322-edf14d4becddbf69.png" alt="img"></p>
+<p>我们虽没有扎克伯格这样的能力和资源，但却可以开发一个应用来运行在已经存在的复杂AI平台上。这个过程只需关心怎样设计和开发语音应用，相对来说要简单的多。Amazon和Google已经提供了开源的模板、代码、以及搭建不同类型语音app的步骤指南，甚至无任何开发经验者也能在一个小时左右搭建一款应用.</p>
+<p>Amazon和Google在简化应用开发上的投资正初见成效，每月都有数以千计的语音应用被投放在市场。语音应用的喷井式增长让人们想起了90年代网页的黄金爆发期，以及后来伴随app store出现的移动app爆发。</p>
+<p><img src="/2017/05/designing-voice-experiences/1599322-6d2029b564743796.png" alt="img"></p>
+<p>在一个充斥着语音应用的市场上，好的设计能让你的应用和其它上百种同类应用体现出差异。</p>
+<h2 id="设计语音体验"><a href="#设计语音体验" class="headerlink" title="设计语音体验"></a>设计语音体验</h2><p>好的语音用户体验需要在开发前进行设计，它可以分为五个是发生在开发前的五部流程。尽管直接着手开发非常诱人，但花时间打磨设计仍十分值得。</p>
+<p><img src="/2017/05/designing-voice-experiences/1599322-a74f62141e1aad87.png" alt="img"></p>
+<p>接下来我们来探讨并应用这每一步去设计一个语音应用，这个应用可以用Alexa的Skill模板来轻而易举地开发出来。</p>
+<h3 id="一、发现"><a href="#一、发现" class="headerlink" title="一、发现"></a>一、发现</h3><p>设计流程开始于这样一个问题：“这个语音应用如何向用户提供有价值的服务？”不管你是开发独立应用程序（像我们即将开发的Skill）还是跨平台的应用程序，这个问题都是适用的。考虑用户为什么使用你的语音应用以及在哪里使用。Mary Meeker的2016互联网趋势报告显示，人们使用语音界面的原因依次有：非接触操作、交互响应速度快和使用方便等，使用地点主要在家里和车中。</p>
+<p><img src="/2017/05/designing-voice-experiences/1599322-30e3c9f99e1aa6fb.png" alt="img"></p>
+<p>“发现”这一步的关键点在于：找出哪种用户需求通过语音应用实现比手机或电脑实现更简单方便。比如银行为用户提供账户信息或者电影爱好者查询附近正在上映的近期电影。</p>
+<p>如果你的竞争对手已经有语音应用了，可以看看一下他们是怎么做的，用户在应用商店（比如亚马逊的Alexa Skill Store）对他们的评价怎么样。这样做的目的并不是盲目的抄袭，而是了解他们所提供的功能以及用户的期望。</p>
+<p>（当作者写下这篇文章的时候，关于开发Alexa Skill的小知识已经超过了1500条，然而这1500条当中没有一条是关于用户体验设计的。为了阐述语音设计流程，我们会创建一个UX设计的skill，以便读者们能够验证从文中学到的知识或者从步骤中学到一些新的东西）</p>
+<h3 id="二、定义"><a href="#二、定义" class="headerlink" title="二、定义"></a>二、定义</h3><p>接下来是定义我们所要开发的app的特性以及它向用户提供的功能。</p>
+<p><strong>个性</strong></p>
+<p>设计语音界面，我们不必像设计网页或移动界面一样加很多视觉元素来强调个性。语音界面的个性来自于声音和语调。不像扎克伯格能亲耳听到Freeman舒缓的声音，我们只能听到设备发出的默认声音。这就使得语调和词汇在传递语音app的个性上变得非常重要。</p>
+<p>好在关于语调的大多数底层工作已经被完成了，我们在Alexa的企业品牌指南及网站风格指南（具体请查看“tone of voice”部分）中也可以看到相关文档。你可以利用这些指南来赋予语音app个性，使得你的app在跨平台时也能有统一的品牌特性。</p>
+<p>谈到个性和语调，我便联想到了维珍集团（Virgin Group）。维珍集团清楚地定义了他们的品牌特性并将其传达给了用户。美国维珍的理想语调是“熟悉、悠闲、非正式、好玩及玩世不恭”，这种语调清楚地贯穿于与用户的交流中。</p>
+<p><img src="/2017/05/designing-voice-experiences/1599322-5f91fd1f7400eadf.png" alt="img"></p>
+<p>如果你曾尝试过让Alexa唱一首歌或讲个冷笑话，那你就会知道Alexa是有她自己的个性的。因为好奇，我向Alexa团队询问过关于Alexa个性的问题，他们是这样回答的：</p>
+<blockquote>
+<p>在塑造Alexa的声音时，我们在她的声音中赋予了Amazon最看重的东西。我们想让她乐于助人、谦虚而聪明、并且还能有一点幽默感。这是一个持续推进的过程，我们也期待在开发者们让她变的更聪明的同时，她的声音也能随之不断进化。</p>
+</blockquote>
+<p>除了声音本身，反应应用个性的还有应用的名字、图标、介绍文字以及唤醒语等。因此，应用上线前应该好好打磨的地方。</p>
+<p>对UX设计师来说，我们决定了语音应用是以简单粗暴的方式还是风趣幽默的方式来应对用户的问答。</p>
+<p>简单粗暴的语调可能是这样的：</p>
+<blockquote>
+<p>以下哪一个用户体验设计原则更偏向于极简主义：</p>
+<ul>
+<li>奥卡姆剃刀</li>
+<li>希克法则</li>
+<li>美学-可用性效应</li>
+<li>满意即可</li>
+</ul>
+</blockquote>
+<p>而风趣幽默的语调可能是这样的：</p>
+<blockquote>
+<p>地球人都知道，有个UX设计原则喜欢简单讨厌繁琐，不骗你哦！你猜这是哪个原则？</p>
+<ul>
+<li>奥卡姆剃刀：设计师能达到的最高境界</li>
+<li>希克法则：听起来像是Low逼设计师才能想到的点子</li>
+<li>美学-可用性效应：这个术语蛮高大上的</li>
+<li>满意即可：I can’t get no satisficing…反正滚石乐队是这样唱的</li>
+</ul>
+</blockquote>
+<p>好吧，太夸张了，我们还是选择简单粗暴吧。</p>
+<p><strong>功能</strong></p>
+<p>你需要仔细斟酌你的应用应该向用户提供什么样的功能。从第一步（定义）开始重新考虑哪些是核心功能，哪些是与你业务相关的功能。一些应用所提供的核心功能很容易界定，比如银行当然应该向用户提供查询余额、交易记录和交易日期的业务。还有一些应用提供与公司核心业务相关的一些服务，比如汰渍的去污指南语音应用、Glad（食物储存设备及垃圾袋制造商）的两款语音应用，一款应用是帮助用户记忆他们将剩饭剩菜放在了什么地方的，另一款帮用户对可回收垃圾和不可回收垃圾进行分类。</p>
+<p>如果你经历过从PC转向移动端时对功能的重新思考，那开发语音应用也可借鉴这一过程。你应该重点思考，在放置于共享空间中的语音设备上，什么的功能才是你的用户最需要的。如果你的Skill涉及到安全和隐私，也可以考虑为它设置安全等级（如Capital One Alexa Skill允许用户为账号创建个人密码）。也许你想为你的语音应用添加一堆功能，但最好选1~5个功能来着手实现，并在上线之后通过用户数据分析来升级和维护。</p>
+<p>假如我们要开发的示例UX design Skill核心功能是：</p>
+<ol>
+<li>为用户提供UX设计原则的解释。</li>
+<li>用一个随机的UX设计原则来测试单个用户。</li>
+<li>用多个UX设计原则来测试单个用户，并记录测试分数。</li>
+<li>举办一场多个用户参与的UX设计原则测试竞赛。</li>
+</ol>
+<p>因为我们是用Amazon的Skill模板来开发这个UX design Skill的，受限于其模板类型，以上功能我们只能选择功能1（用fact skill模板）或功能3（用trivia skill模板）。假设我们通过研究发现，用户对回答问题比听机器解释UX设计原则更感兴趣，那么我们就可以将我们的UX design Skill核心功能确定为功能3：用多个UX设计原则来测试单个用户，并记录测试分数。</p>
+<h3 id="三、细化对话流"><a href="#三、细化对话流" class="headerlink" title="三、细化对话流"></a>三、细化对话流</h3><p>确定了语音应用的核心功能后，接下来便是细化应用和用户的对话流了。语音对话相当复杂，它包含语义的迂回转折以及话题的随意转换。语音AI平台仍然需要很长的时间才能处理这种复杂度，所以你必须教你的语音应用如何正确的响应用户。</p>
+<p>虽然你的语音应用只提供前面已经定义好的核心功能，但用户还是会用各种形式问各种问题。细化对话流程能让你的语音应用合理地回应用户，或者将话题向应用能回答的方向引导。</p>
+<p>无论你的语音应用提供什么功能，设计流程都开始于创建用户与应用之间的对话脚本，这和编剧的剧本是一样的。当你写对话脚本时，需要注意语言所传递的个性以及声音和语调特征。对我们的UX Design Skill语音应用来说，这意味着着手创建一系列问答。</p>
+<p>问答从“愉悦路径（happy path）”开始，愉快路径是指对话流程中，语音应用能够无期望和无错误地回应用户请求的部分。接下来再细化期望（用户没有提供完整信息的部分）和错误（语音应用不理解或无法回应用户请求的部分）。</p>
+<p>因为对话脚本是供用户听而不是读的，你最好能多大声读读你写的对话，听听对话是不是自然，检查声音的语调是不是你想传达的。</p>
+<p>如果你的语音应用在对话过程中需要在手机展示一些内容，那你也需要设计这些交互，以让整个过程流畅无阻。比如，汰渍的除污Skill提示用户参考手机app Alexa中的除污指南并听相关指示。这个功能估计很可能就会在带触控屏的Echo中实现。</p>
+<p>以下是我们的UX design Skill实现核心功能的一个愉悦路径：</p>
+<blockquote>
+<p><strong>用户</strong>：“Alexa，开始UX设计答题。”</p>
+<p><strong>Alexa</strong>：“我将会问你五个问题，问题的答案是多选。请尽最大可能来回答我提的问题，你只需回答答案的序号。答题开始，问题一：…”</p>
+<p><strong>用户</strong>：【正确回答】</p>
+<p><strong>Alexa</strong>：“回答正确！你的得分是1分，问题二：…”</p>
+<p><strong>用户</strong>：【错误回答】</p>
+<p><strong>Alexa</strong>：“哦噢，答错了。正确的答案是【正确答案】。你的得分还是1分。问题三：…”</p>
+<p><strong>Alexa</strong>（五个问题问完后）：“回答正确！五题你共答对了四题，期待您的下一次答题！”</p>
+</blockquote>
+<h3 id="四、备选语描述"><a href="#四、备选语描述" class="headerlink" title="四、备选语描述"></a>四、备选语描述</h3><p>人们说话时会用多种方式来表达同一种意思，语音app需要对此进行辨别。语义地图是一种教语音应用如何适应请求语义多意性的方法。</p>
+<p>对于上一步我们所细化的对话流中的每一步，都应该考虑用户可能会用其它的什么词来发出这些请求。将每个请求逐词拆分，考察在该语境中每个词可能的同义词，并确保考虑到每个词在不同地区和方言中的使用情况。如果你的语音应用是含糖碳酸饮料（苏打、汽水、可乐、汤力水、软饮料、气泡饮料），长三明治（潜艇堡、磨床堡、英雄堡、穷孩子堡、轰炸机堡、意大利堡、法国堡），鞋类（运动鞋、鞋子、体操鞋、沙滩鞋、跳跃鞋、网球鞋、跑步鞋、训练鞋），那可就够你忙活的了。</p>
+<p>为了使用语音应用能够理解用户的请求，你的变异词列表应该尽量完整。Alexa需要我们提供“utterance”形式的变异词，并推荐提供“尽可能多的代表性词汇”。变异词的数量和你的语音应用核心功能有关，但其数量往往高达数百个。不过你也可以简化变异词。</p>
+<p>以下是我们UX design问答的简单语义地图。Alexa的AI平台在基于其模板来理解用户意图方面做得很好。不过如果你想对变异词进行改动（比如我们将“小游戏”改为“小测试”），那么我们必须向表格中增加这些变异词。</p>
+<p><img src="/2017/05/designing-voice-experiences/1599322-94601a460a0ce1ce.png" alt="img"></p>
+<h3 id="五、优化"><a href="#五、优化" class="headerlink" title="五、优化"></a>五、优化</h3><p>设计流程的最后一步是验证并优化语音应用。在“细化”这一步，大声读对话内容能使对话流更真实、自然。而“优化”则涉及到与用户一起测试我们的语音界面。</p>
+<p>最简单的测试方法是绿野仙踪测试，即被测试人员模拟语音设备，基于语音界面对话脚本来回应测试人员。另一种测试方法是用SaySpring这样的原型测试软件创建并测试交互原型。</p>
+<p>如果你的语音应用是用代码模板创建的，那就最好使用Amazon和Google在Skill开发区提供的测试工具（如下图所示） 来创建和测试app，或者直接用语音设备上的测试模式来测试。</p>
+<p><img src="/2017/05/designing-voice-experiences/1599322-f444fa7b1dd18de8.png" alt="img"></p>
+<p>这种测试方式能够给你一种更贴近真实的语音感受，比如如何应对错误，如何回应请求，以及不自然、机械式的语音反馈。</p>
+<h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><p>现在我们已经设计了完整的语音体验，接下来就是编译-测试-提交环节了。关于这个环节，每个平台都有详细的指南和教程来帮助开发者们编译和测试，主流工具有：Alexa Skill Kit，Develop Action for Google，以及Cortana，Cortana甚至提供了复用Alexa Skill代码的功能。</p>
+<p>开发过程中，需要考虑到反馈回路以及数据分析方法，它能帮助你了解应用的使用情况。虽然你可以直接在你的开发者账号中查看Skill矩阵（用户、会话、言辞、意图），但更高级别的数据分析也可以使用VioceLabs这样的工具来实现。</p>
+<p>编译和测试完成之后，最后一步是精简提交流程。因为亚马逊Skill市场已经经过了快速增长，用户发现新的有用的app变得越来越难了。除非Amazon主动解决这个问题，否则你最好为你的语音app增加可视化元素（包括让用户感兴趣的Icon、名称及功能描述）来帮助用户发现并尝试你的Skill。</p>
+<p>我们在Amazon Alexa Skill中创建了一个UX Design Quiz Skill来帮助大家进一步了解和测试。</p>
+<h2 id="指导原则"><a href="#指导原则" class="headerlink" title="指导原则"></a>指导原则</h2><p>以下是设计语音体验的几个指导性原则。更多关于Do’s和Don’s的指导原则可以在Amazon和Google查看。</p>
+<p><strong>帮助用户快速上手</strong></p>
+<p>以用户能够与之互动的方式来介绍app。</p>
+<p>欢迎使用UX Design Quiz。我将会问你五个有关UX设计的问题，看看你能回答正确几个。需要的话，你也可以让我暂停或重复一下问题。需要现在就开始答题吗？</p>
+<p><strong>使回应尽量简洁以减少认知负担</strong></p>
+<p>在语音界面下，用户必须依赖他们的短期记忆来和设备互动，因此你的回应内容应尽量简洁、亲切。</p>
+<blockquote>
+<p><strong>Alexa</strong>：“提出该原则的人是14世纪的逻辑学家、天主教徒，他的名字是以他所出生的英国一个名为萨里的乡村命名的。该原则可以概括为：简单胜于复杂。在用户体验设计领域中，该原则可以帮助我们寻求更简单的设计方案，请问：该原则的名字叫什么？</p>
+<ol>
+<li><p>你的第一选项是Occam’s Razor（奥卡姆剃刀），有时也被称为Ockham’s Razor，或者极简法则。</p>
+</li>
+<li><p>你的下一个选项是Hick’s Law（希克法则），也被称为Hick-Hyman Law。</p>
+</li>
+<li><p>你的下一个选项是美感-可用性效应。</p>
+</li>
+<li><p>你的最后一个选项是“satisficing（满意即可）”，请不要将其和“satisfying（满意）”或“sacrificing（牺牲）”混淆。</p>
+</li>
+</ol>
+<p>请回答A，B，C，或D来做出选择。”</p>
+<p><strong>用户</strong>：“什么？重听一下。还是算了，不答了！”</p>
+</blockquote>
+<p><strong>示例比说明更有效</strong></p>
+<p>说明：“请以年/月/日的格式告诉我你的生日”<br>示例：“请告诉我你的生日，比如1990年4月15日”</p>
+<p><strong>不干扰用户完成任务</strong></p>
+<p>太过勤快地互动有时也让用户挺抓狂的。</p>
+<p><strong>重要操作使用明确的确认语，不重要操作使用含蓄确认语</strong></p>
+<p>如果你让Alexa关灯，Alexa就关灯，不需要再确认一下，尽管她有时仍会说“OK”来确认一下。</p>
+<p><img src="/2017/05/designing-voice-experiences/1599322-742a90f06d859a89.png" alt="img"></p>
+<p><strong>容错设计</strong></p>
+<p>错误是在所难免地，设计中我们应该处理这些错误。常见的错误包括莫名其妙的请求，不完整的信息，沉默或者无法执行的请求。设计中应该知晓这些，给予用户相应的选择以让流程继续。</p>
+<p><strong>尊重用户的隐私和安全</strong></p>
+<p><img src="/2017/05/designing-voice-experiences/1599322-39b863e93da45342.png" alt="img"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<p>无论何时，在处理与人类交流相关的事，你都需要将人想成非常高级的操作系统。你的最高目标就是模仿人类。</p>
+<p>——KK Barrett，电影《Her》艺术指导，Wired，2014</p>
+</blockquote>
+<p>如果你还没有看过电影《Her》，可以花几个小时去看看这部未来主义电影，它讲述了一个孤独的作家同一个OS的恋情故事。虽然电影是虚构的，但随着Amazon Echo和Google Home这样的独立语音驱动设备进入千家万户，语音体验正变得越来越普遍。像Amazon和Google这样AI平台的建立，以及其宜家式的开发指南，开发语音应用正变成一个简单的，模板式的过程。尽管谁都想快速进入开发阶段，但好的语音体验不会平白无故产生，它必须要像文章中描述的那样被设计出来。</p>
+<h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><p><strong>AI平台工具</strong></p>
+<ul>
+<li><a href="https://developer.amazon.com/alexa-skills-kit" target="_blank" rel="noopener">Alexa Skills Kit</a>, Amazon</li>
+<li><a href="https://developers.google.com/actions/" target="_blank" rel="noopener">Actions for Google</a></li>
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/alexa-skills-kit-voice-design-best-practices" target="_blank" rel="noopener">Alexa Skills Kit Voice Design Best Practices</a>, Amazon</li>
+<li><a href="https://developers.google.com/actions/design" target="_blank" rel="noopener">Actions for Google design resources</a>*</li>
+</ul>
+<p><strong>语调</strong></p>
+<ul>
+<li><a href="https://www.nngroup.com/articles/tone-voice-users/" target="_blank" rel="noopener">The Impact of Tone of Voice on Users’ Brand Perception</a>, Kate Meyer, Nielsen Norman Group</li>
+<li><a href="https://www.smashingmagazine.com/2012/08/finding-tone-voice/" target="_blank" rel="noopener">Finding Your Tone of Voice</a>, Robert Mills, Smashing Magazine</li>
+<li><a href="https://www.distilled.net/tone-of-voice/" target="_blank" rel="noopener">Finding Your Brand’s Voice</a>, Harriet Cummings, Distilled*</li>
+</ul>
+<p><strong>短语和方言</strong></p>
+<ul>
+<li><a href="http://www.nytimes.com/interactive/2013/12/20/sunday-review/dialect-quiz-map.html" target="_blank" rel="noopener">How Y’all, Youse and You Guys Talk</a> (interactive quiz), New York Times</li>
+<li><a href="https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/defining-the-voice-interface" target="_blank" rel="noopener">Defining the Voice Interface</a> (and Alexa utterances), Amazon</li>
+<li><a href="http://www.makermusings.com/2015/07/21/defining-utterances-for-the-alexa-skills-kit/" target="_blank" rel="noopener">Defining Utterances for the Alexa Skills Kit</a> (including <a href="http://www.makermusings.com/amazon-echo-utterance-expander/" target="_blank" rel="noopener">the tool</a>), Maker Musings*</li>
+</ul>
+<p><strong>原型与测试</strong></p>
+<ul>
+<li><a href="https://www.sayspring.com/" target="_blank" rel="noopener">SaySpring</a> “Free prototyping software for voice”</li>
+<li><a href="https://echosim.io/" target="_blank" rel="noopener">Echosim.io</a> “Alexa Skill Testing Tool”</li>
+<li>“<a href="https://developers.google.com/actions/tools/web-simulator" target="_blank" rel="noopener">Web Simulator</a>,” Actions for Google</li>
+</ul>
+<p><strong>报告、书、电影</strong></p>
+<ul>
+<li>“<a href="http://voicelabs.co/2017/01/15/the-2017-voice-report/" target="_blank" rel="noopener">The 2017 Voice Report by VoiceLabs</a>”</li>
+<li><a href="http://shop.oreilly.com/product/0636920050056.do" target="_blank" rel="noopener"><em>Designing Voice User Interfaces: Principles of Conversational Experiences</em></a>, Cathy Pearl, O’Reilly Media</li>
+<li><a href="http://www.imdb.com/title/tt1798709/" target="_blank" rel="noopener">Her</a> (movie)</li>
+</ul>
+<p><em>原文作者<br>Lyndon Cerejo是凯捷敏捷设计与可视化业务的认证用户体验分析师。他曾成功服务于好事达保险，美国运通，可口可乐，通用汽车，美林证券以及沃尔玛公司。他所擅长的领域是用户体验分析，信息构建，快速原型，可用性测试，线上策略及市场。他是marketing.com的作者之一，这本书主要讲述营销策略在互联网中的应用。</em></p>
+<p><em>原文地址<br><a href="https://www.smashingmagazine.com/2017/05/designing-voice-experiences/" target="_blank" rel="noopener">https://www.smashingmagazine.com/2017/05/designing-voice-experiences/</a></em></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#理解语音界面"><span class="toc-number">1.</span> <span class="toc-text">理解语音界面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#构建语音体验"><span class="toc-number">2.</span> <span class="toc-text">构建语音体验</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设计语音体验"><span class="toc-number">3.</span> <span class="toc-text">设计语音体验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、发现"><span class="toc-number">3.1.</span> <span class="toc-text">一、发现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、定义"><span class="toc-number">3.2.</span> <span class="toc-text">二、定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、细化对话流"><span class="toc-number">3.3.</span> <span class="toc-text">三、细化对话流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、备选语描述"><span class="toc-number">3.4.</span> <span class="toc-text">四、备选语描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、优化"><span class="toc-number">3.5.</span> <span class="toc-text">五、优化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开发"><span class="toc-number">4.</span> <span class="toc-text">开发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指导原则"><span class="toc-number">5.</span> <span class="toc-text">指导原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">6.</span> <span class="toc-text">总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#资源"><span class="toc-number">7.</span> <span class="toc-text">资源</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2017/05/designing-voice-experiences.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2017/05/designing-voice-experiences.html&text=【译】设计语音体验"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2017/05/designing-voice-experiences.html&title=【译】设计语音体验"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2017/05/designing-voice-experiences.html&is_video=false&description=【译】设计语音体验"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=【译】设计语音体验&body=Check out this article: http://yoursite.com/2017/05/designing-voice-experiences.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2017/05/designing-voice-experiences.html&title=【译】设计语音体验"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2017/05/designing-voice-experiences.html&title=【译】设计语音体验"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2017/05/designing-voice-experiences.html&title=【译】设计语音体验"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2017/05/designing-voice-experiences.html&title=【译】设计语音体验"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2017/05/designing-voice-experiences.html&name=【译】设计语音体验&description=&lt;p&gt;语音界面正变的越来越普遍。虽然像Siri和Cortana这样的语音助手已经出现好几年了，但最近这段时间Amazon和Google的语音驱动设备正将它们带入千家万户。&lt;/p&gt;
+&lt;p&gt;近期VoiceLabs的预测表明2017年语音驱动设备的出货量将达到2450万，几乎是去年的四倍。作为用户体验设计师，现在我们有机会设计语音体验了！&lt;/p&gt;
+&lt;p&gt;语音界面虽不同于传统界面，但这并不是说我们就可以抛弃在传统界面设计中所积累的经验。我们需要用之前的设计流程来匹配以对话式交互和无屏幕为特征的语音驱动界面。在本文中，我们将认识语音设备的工作原理，探讨语音体验设计的步骤，并通过为Alexa设计一个语音应用（Amazon称之为Skill）来阐述这些步骤。&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 Ryan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+

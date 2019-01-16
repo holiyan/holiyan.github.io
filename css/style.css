@@ -1180,7 +1180,7 @@ article .content .caption {
   }
 }
 .content p {
-  margin: 0;
+  margin: 0.5rem 0 /* 设置文章中段落的margin值 */;
 }
 blockquote {
   font-weight: 400 !important;
@@ -1507,6 +1507,14 @@ code {
 }
 .content h2:before {
   content: "" !important;
+}
+table th,
+table td {
+  border: 1px solid #666 /* 设置全站表格边框样式 */;
+}
+.highlight th,
+.highlight td {
+  border: none /* 将代码块highlight中表格边框去掉 */;
 }
 blockquote {
   margin: 1rem 10px;
