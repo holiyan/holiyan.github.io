@@ -6,18 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="主要内容：剥离了见外原有的资讯功能，使网站成为视频和语音转写/翻译工具平台，根据产品定位变化优化了登录、创建项目等流程，并确保了各个功能模块的体验一致性。 交互地址：http://axure.yixin.im/view?pid=10&amp;amp;mid=82&amp;amp;id=4227  ⬇︎ 10月19日-12月26日  见外工作台_V2.4 主要内容：优化了视频编辑页交互细节，增加了诸如切分字幕、语气">
+    <meta name="description" content="网易见外是网易人工智能事业部孵化的一款工具类产品。我刚加入团队时产品还处于内测阶段，存在定位模糊、逻辑混乱、使用体验差等问题。加入团队后我与策划一起对产品定位进行了探索，梳理了产品功能逻辑、优化了使用体验，使得网易见外成为人工智能应用产品之一。这篇文章是对产品探索和优化过程的梳理，目的是回顾产品探索过程，积累相关产品经验。 网易见外是什么近些年语音转写（STT）技术越来越成熟，讯飞、百度等公司都在">
 <meta name="keywords" content="项目总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="网易见外项目">
+<meta property="og:title" content="从模糊到清晰：一个工具产品的优化过程">
 <meta property="og:url" content="http://yoursite.com/2019/01/project-netease-sight.html">
 <meta property="og:site_name" content="造物之旅">
-<meta property="og:description" content="主要内容：剥离了见外原有的资讯功能，使网站成为视频和语音转写/翻译工具平台，根据产品定位变化优化了登录、创建项目等流程，并确保了各个功能模块的体验一致性。 交互地址：http://axure.yixin.im/view?pid=10&amp;amp;mid=82&amp;amp;id=4227  ⬇︎ 10月19日-12月26日  见外工作台_V2.4 主要内容：优化了视频编辑页交互细节，增加了诸如切分字幕、语气">
+<meta property="og:description" content="网易见外是网易人工智能事业部孵化的一款工具类产品。我刚加入团队时产品还处于内测阶段，存在定位模糊、逻辑混乱、使用体验差等问题。加入团队后我与策划一起对产品定位进行了探索，梳理了产品功能逻辑、优化了使用体验，使得网易见外成为人工智能应用产品之一。这篇文章是对产品探索和优化过程的梳理，目的是回顾产品探索过程，积累相关产品经验。 网易见外是什么近些年语音转写（STT）技术越来越成熟，讯飞、百度等公司都在">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-16T02:26:14.182Z">
+<meta property="og:image" content="http://yoursite.com/2019/01/project-netease-sight/homepage-logged.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/project-netease-sight/jianwai-product-logic.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/project-netease-sight/首页未登录_改版后.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/project-netease-sight/jianwai-product-logic-adjusted.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/project-netease-sight/jianwai-process.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/project-netease-sight/process-flow-02.gif">
+<meta property="og:image" content="http://yoursite.com/2019/01/project-netease-sight/jianwai-process-keypoint.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/project-netease-sight/post-editing.gif">
+<meta property="og:updated_time" content="2019-01-18T10:02:29.751Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="网易见外项目">
-<meta name="twitter:description" content="主要内容：剥离了见外原有的资讯功能，使网站成为视频和语音转写/翻译工具平台，根据产品定位变化优化了登录、创建项目等流程，并确保了各个功能模块的体验一致性。 交互地址：http://axure.yixin.im/view?pid=10&amp;amp;mid=82&amp;amp;id=4227  ⬇︎ 10月19日-12月26日  见外工作台_V2.4 主要内容：优化了视频编辑页交互细节，增加了诸如切分字幕、语气">
+<meta name="twitter:title" content="从模糊到清晰：一个工具产品的优化过程">
+<meta name="twitter:description" content="网易见外是网易人工智能事业部孵化的一款工具类产品。我刚加入团队时产品还处于内测阶段，存在定位模糊、逻辑混乱、使用体验差等问题。加入团队后我与策划一起对产品定位进行了探索，梳理了产品功能逻辑、优化了使用体验，使得网易见外成为人工智能应用产品之一。这篇文章是对产品探索和优化过程的梳理，目的是回顾产品探索过程，积累相关产品经验。 网易见外是什么近些年语音转写（STT）技术越来越成熟，讯飞、百度等公司都在">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/project-netease-sight/homepage-logged.png">
     
     
         
@@ -37,7 +46,7 @@
         
     
     <!-- title -->
-    <title>网易见外项目</title>
+    <title>从模糊到清晰：一个工具产品的优化过程</title>
     <!-- styles -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- persian styles -->
@@ -88,20 +97,24 @@
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/01/project-netease-sight.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/01/project-netease-sight.html&text=网易见外项目"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/01/project-netease-sight.html&title=网易见外项目"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/01/project-netease-sight.html&is_video=false&description=网易见外项目"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=网易见外项目&body=Check out this article: http://yoursite.com/2019/01/project-netease-sight.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/01/project-netease-sight.html&title=网易见外项目"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/01/project-netease-sight.html&title=网易见外项目"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/01/project-netease-sight.html&title=网易见外项目"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/01/project-netease-sight.html&title=网易见外项目"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/01/project-netease-sight.html&name=网易见外项目&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/01/project-netease-sight.html&text=从模糊到清晰：一个工具产品的优化过程"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/01/project-netease-sight.html&title=从模糊到清晰：一个工具产品的优化过程"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/01/project-netease-sight.html&is_video=false&description=从模糊到清晰：一个工具产品的优化过程"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=从模糊到清晰：一个工具产品的优化过程&body=Check out this article: http://yoursite.com/2019/01/project-netease-sight.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/01/project-netease-sight.html&title=从模糊到清晰：一个工具产品的优化过程"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/01/project-netease-sight.html&title=从模糊到清晰：一个工具产品的优化过程"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/01/project-netease-sight.html&title=从模糊到清晰：一个工具产品的优化过程"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/01/project-netease-sight.html&title=从模糊到清晰：一个工具产品的优化过程"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/01/project-netease-sight.html&name=从模糊到清晰：一个工具产品的优化过程&description=&lt;p&gt;网易见外是网易人工智能事业部孵化的一款工具类产品。我刚加入团队时产品还处于内测阶段，存在定位模糊、逻辑混乱、使用体验差等问题。加入团队后我与策划一起对产品定位进行了探索，梳理了产品功能逻辑、优化了使用体验，使得网易见外成为人工智能应用产品之一。这篇文章是对产品探索和优化过程的梳理，目的是回顾产品探索过程，积累相关产品经验。&lt;/p&gt;
+&lt;h3 id=&#34;网易见外是什么&#34;&gt;&lt;a href=&#34;#网易见外是什么&#34; class=&#34;headerlink&#34; title=&#34;网易见外是什么&#34;&gt;&lt;/a&gt;网易见外是什么&lt;/h3&gt;&lt;p&gt;近些年语音转写（STT）技术越来越成熟，讯飞、百度等公司都在语音技术的商用上做积极探索。网易在语音识别领域有多年的积淀，也在思考如何将这种能力包装为能解决用户实际问题的产品。&lt;/p&gt;
+&lt;p&gt;受内部需求的驱动，结合网易在机器翻译领域的技术积累，产品团队首先将目标瞄准在了视频的转写和翻译上。&lt;/p&gt;
+&lt;p&gt;想象你是节目组的视频制作人员，现在你想给视频加上字幕，你是不是得边听边码字啊？如果视频中的语言是英文，你想加上中文字幕，那是不是还得一句句翻译过来啊？有了语音转写 + 机器翻译技术，这个过程就简单多了。你只需上传视频，duang！文字和译文就都有了，岂不美哉。如果机器的识别和翻译结果不理想，再进行编辑就可以了，总比从头码字要快的多。以上的这个过程，在翻译领域，叫做 MT+PE （Machine Transtate + Post Editing）。&lt;/p&gt;
+&lt;p&gt;网易见外就是这样一款利用语音识别和机器翻译技术，帮助译员提高视频转写和翻译效率的工具型产品。&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
     <div id="toc">
-      
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#网易见外是什么"><span class="toc-number">1.</span> <span class="toc-text">网易见外是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模糊的目标用户"><span class="toc-number">2.</span> <span class="toc-text">模糊的目标用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#平台资讯化探索"><span class="toc-number">3.</span> <span class="toc-text">平台资讯化探索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#做好用的转写和翻译工具"><span class="toc-number">4.</span> <span class="toc-text">做好用的转写和翻译工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">5.</span> <span class="toc-text">总结</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -113,7 +126,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        网易见外项目
+        从模糊到清晰：一个工具产品的优化过程
     </h1>
 
 
@@ -145,13 +158,67 @@
   
 
   <div class="content" itemprop="articleBody">
-    <p>主要内容：剥离了见外原有的资讯功能，使网站成为视频和语音转写/翻译工具平台，根据产品定位变化优化了登录、创建项目等流程，并确保了各个功能模块的体验一致性。</p>
-<p>交互地址：<a href="http://axure.yixin.im/view?pid=10&amp;mid=82&amp;id=4227" target="_blank" rel="noopener">http://axure.yixin.im/view?pid=10&amp;mid=82&amp;id=4227</a> </p>
-<p>⬇︎ 10月19日-12月26日 </p>
-<p><strong>见外工作台_V2.4</strong></p>
-<p>主要内容：优化了视频编辑页交互细节，增加了诸如切分字幕、语气词过滤、词汇替换等常用功能，极大简化了语音转写文本的交互方式，并统一了各详情页的操作方式。 </p>
-<p>交互地址：<a href="http://axure.yixin.im/view?pid=10&amp;mid=82&amp;id=7183" target="_blank" rel="noopener">http://axure.yixin.im/view?pid=10&amp;mid=82&amp;id=7183</a> </p>
-<p><strong>工作台主要界面截图</strong> </p>
+    <p>网易见外是网易人工智能事业部孵化的一款工具类产品。我刚加入团队时产品还处于内测阶段，存在定位模糊、逻辑混乱、使用体验差等问题。加入团队后我与策划一起对产品定位进行了探索，梳理了产品功能逻辑、优化了使用体验，使得网易见外成为人工智能应用产品之一。这篇文章是对产品探索和优化过程的梳理，目的是回顾产品探索过程，积累相关产品经验。</p>
+<h3 id="网易见外是什么"><a href="#网易见外是什么" class="headerlink" title="网易见外是什么"></a>网易见外是什么</h3><p>近些年语音转写（STT）技术越来越成熟，讯飞、百度等公司都在语音技术的商用上做积极探索。网易在语音识别领域有多年的积淀，也在思考如何将这种能力包装为能解决用户实际问题的产品。</p>
+<p>受内部需求的驱动，结合网易在机器翻译领域的技术积累，产品团队首先将目标瞄准在了视频的转写和翻译上。</p>
+<p>想象你是节目组的视频制作人员，现在你想给视频加上字幕，你是不是得边听边码字啊？如果视频中的语言是英文，你想加上中文字幕，那是不是还得一句句翻译过来啊？有了语音转写 + 机器翻译技术，这个过程就简单多了。你只需上传视频，duang！文字和译文就都有了，岂不美哉。如果机器的识别和翻译结果不理想，再进行编辑就可以了，总比从头码字要快的多。以上的这个过程，在翻译领域，叫做 MT+PE （Machine Transtate + Post Editing）。</p>
+<p>网易见外就是这样一款利用语音识别和机器翻译技术，帮助译员提高视频转写和翻译效率的工具型产品。</p>
+<a id="more"></a>
+<h3 id="模糊的目标用户"><a href="#模糊的目标用户" class="headerlink" title="模糊的目标用户"></a>模糊的目标用户</h3><p>虽然在接触产品之前我大概了解它是做什么的，但试用了产品之后我仍然有很多困惑的地方。拿产品的首页来说：</p>
+<p><img src="/2019/01/project-netease-sight/homepage-logged.png" width="90%"></p>
+<p>我不明白原始内容、校对内容、排版内容、完成内容之间都有什么区别，手动添加的内容是什么，其它的内容又怎么来的等等。</p>
+<p>混乱的表象背后，一定有其深层次的原因。在深扒产品的逻辑之后，我发现首页的内容有两种来源，一种是平台抓取的海外资讯内容（视频主要来自 youtube ），一种是用户自己上传的用于翻译的内容。为什么要抓取海外的资讯内容呢？这是因为网易见外服务于网易新闻的网易号，抓取的内容有一部分作为网易号的内容素材。</p>
+<p>既然有了大量的海外内容，那平台就承载了转写翻译后的第二种需求：海外资讯阅读。网站详细的产品逻辑是这样的：</p>
+<p><img src="/2019/01/project-netease-sight/jianwai-product-logic.png" width="600"></p>
+<p>可以看到一个网站承载了两种用户的不同需求：一种是有翻译需求的用户（上图用户A），主要利用平台的语音转写和机器翻译技术来提高翻译效率；另外一种是有资讯阅读需求的用户（上图用户B），进入网站主要是阅读经过平台翻译的海外优质资讯。</p>
+<p>虽然这两种需求有一定关联，但关联度并不强。用一个网站来满足两种用户的不同需求，存在用户群体定位不明确的问题，而这也是为什么我觉得网站难用的根本原因。因此明确地定位网站的用户群体成为了首要任务。</p>
+<p>确定产品定位并不容易，除非在产品立项之初就将一切想清楚（这取决于是否足够了解市场和用户），否则只能在不断尝试中寻找方向。经过了一轮针对种子用户的电话访谈之后，我们发现大多数访客对网站中的内容更感兴趣，所以我们决定进一步强化网站的资讯阅读功能，弱化翻译工具属性（但事后证明这并不是正确的选择，原因我会在下文说明）。</p>
+<h3 id="平台资讯化探索"><a href="#平台资讯化探索" class="headerlink" title="平台资讯化探索"></a>平台资讯化探索</h3><p>确定了强化网站资讯阅读功能这个方向以后，我们首先对之前电话访谈中内容方面的用户反馈进行了梳理。用户所反馈的内容方面的问题可以总结为：内容数量少、更新不及时、翻译质量低。</p>
+<p>这些问题中，翻译质量受限于技术水平短期内无法显著提高，更新频率则比较容易解决，因此优化重点是解决内容数量上的问题。经过分析我们发现，其实平台内容数量并不少（平台定期抓取的海外媒体源大约有500个），用户之所以觉得少是因为优质内容并未有效的展示给用户。因此解决问题的关键是如何筛选并展示平台已有的优质内容。</p>
+<p>确定问题点后，我们通过以下三个方面提升优质内容的曝光率：</p>
+<ul>
+<li>在首页增加人工精选的优质内容</li>
+<li>多方位展示媒体源，提升媒体源曝光率</li>
+<li>优化网站内容布局使其符合用户对资讯网站的期待</li>
+</ul>
+<p>改版之后的网站首页如下：</p>
+<p><img src="/2019/01/project-netease-sight/首页未登录_改版后.png" alt="首页未登录_改版后"></p>
+<p>我们预期的结果是，首页和内容详情页的日访问率有所上升。但经过对各个页面访问量的持续追踪，发现无论访问率还是跳出率都没有显著变化。不过这种现象也很容易理解，因为改版本就对拉新作用不大，用户量小的产品就更是如此了。</p>
+<p>虽然资讯化并没有明显的效果，但改版产生的负面作用却给了我们一些启发。由于新版网站弱化了视频翻译功能，降低了用户自传内容管理入口的层级，这给之前使用视频翻译功能的用户造成了困扰，部分用户反馈难以找到视频上传和管理入口。通过与这部分用户的接触以及对本次改版的反思，我们发现，资讯阅读平台这条路走不通，原因有四点：</p>
+<ul>
+<li>资讯阅读的场景更多地在移动端，而我们目前的产品形态是网页版</li>
+<li>我们本身不生产内容，也没有头条那样的分发算法，做资讯阅读没有任何优势</li>
+<li>我们最核心的优势是语音识别和机器翻译技术，而非资讯内容</li>
+<li>视频翻译领域对机器辅助翻译有需求，且我们已经获得了部分用户的认可</li>
+</ul>
+<p>基于这些原因，我们决定放弃对资讯阅读平台的探索，专注做一款好用的转写和翻译工具。</p>
+<p>行文至此，你也发现了，其实我们走了弯路。这很大一部分原因是，在之前的电话访谈中我们没有区分出核心用户，受访的用户大多是互联网观光客，驱动他们来到平台的原因是好奇心，一旦他们不能发现优质的内容就会离开。而那些对转写和翻译功能有强烈需求的用户，却由于数量太少而被忽视了。这也说明，在产品启动阶段，关注用户的留存比数量更有意义。</p>
+<h3 id="做好用的转写和翻译工具"><a href="#做好用的转写和翻译工具" class="headerlink" title="做好用的转写和翻译工具"></a>做好用的转写和翻译工具</h3><p>确定产品定位后，接下来的工作主要围绕如何做好一款转写和翻译工具进行。既然当前产品承载了资讯阅读和内容转写翻译两种需求，那么首先要做的就是给产品做减法，将资讯阅读功能从产品中剥离。</p>
+<p>1 剥离资讯阅读功能</p>
+<p>上文提过，网站原有的资讯内容来自机器抓取的海外媒体资讯，剥离资讯阅读功能后，相关的流程和子功能（下图橙色框中所示）将不复存在。</p>
+<p><img src="/2019/01/project-netease-sight/jianwai-product-logic-adjusted.png" width="600"></p>
+<p>当然，从平台剥离出去的资讯功能模块我们并未完全放弃，而是将其作为另一款资讯阅读app的内容来源（关于这个app的产品设计思路，可阅读另一篇文章详细了解）。</p>
+<p>砍掉重要功能必然会影响网站使用流程，因此需要调整产品的使用流程。</p>
+<p>2 调整产品使用流程</p>
+<p>在之前的产品逻辑中，阅读资讯是不需要登录网站的，只有上传内容时才需要登录。拿掉资讯阅读功能之后，为了方便管理用户自传内容，使用产品之前必须要登录，因此需要调整网站登录流程。除此之外，由于网站支持视频、音频、文档等多种内容的转写和翻译，因此上传和管理内容的流程也需要调整。</p>
+<p>调整之后的网站的整体使用流程如下所示：</p>
+<p><img src="/2019/01/project-netease-sight/jianwai-process.png" alt="jianwai-process"></p>
+<p>以下是上线之后的效果展示：</p>
+<p><img src="/2019/01/project-netease-sight/process-flow-02.gif" alt="process-flow-02"></p>
+<p>调整完网站的整体信息架构之后，接下来就是打磨产品使用体验。</p>
+<p>3 打磨产品使用体验</p>
+<p>影响产品使用体验的因素有很多，做优化时不能胡子眉毛一把抓，需要 focus 在对体验影响较大的关键流程和功能上。在网站的整体使用流程中，登录、上传和机器翻译的过程比较简单，唯一需要用户花费较多时间的是译后编辑，因此优化的重点是译后编辑功能。</p>
+<p><img src="/2019/01/project-netease-sight/jianwai-process-keypoint.png" alt="jianwai-process-keypoint"></p>
+<p>对于视频和语音格式的素材，经过语音转写（STT）并翻译后，译后编辑存在两种操作：</p>
+<ul>
+<li>校对转写结果</li>
+<li>校对翻译结果</li>
+</ul>
+<p>为了方便用户编辑，编辑转写结果时应显示对应的音轨位置以及翻译结果位置，同时文本的编辑要尽可能简单流畅。这部分的细节非常复杂，这里不做详细介绍，以下优化后的操作截屏：</p>
+<p><img src="/2019/01/project-netease-sight/post-editing.gif" alt="post-editing"></p>
+<p>上图是译后编辑页面，页面底部是音频控制条，左侧是音频识别结果，右侧是翻译结果。编辑识别结果时音频控制条会自动定位至文本所在位置，识别结果编辑后译文会实时更新，整个过程即符合常规文档操作习惯，又兼顾了译后编辑的特殊性。</p>
+<p>经过以上三点优化和对细节的打磨，这款产品逐渐变的成熟，也因此收获了一些忠实用户。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>人工智能的概念近两年非常火热，但产品的落地并不容易。在我看来，要做好人工智能产品，一方面是充分了解自身技术实力，另一方面需要深刻洞察用户需求。本文梳理了一款AI工具类产品的用户定位探索过程，对经验教训进行了总结。</p>
 
   </div>
 </article>
@@ -175,21 +242,25 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#网易见外是什么"><span class="toc-number">1.</span> <span class="toc-text">网易见外是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#模糊的目标用户"><span class="toc-number">2.</span> <span class="toc-text">模糊的目标用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#平台资讯化探索"><span class="toc-number">3.</span> <span class="toc-text">平台资讯化探索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#做好用的转写和翻译工具"><span class="toc-number">4.</span> <span class="toc-text">做好用的转写和翻译工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">5.</span> <span class="toc-text">总结</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/01/project-netease-sight.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/01/project-netease-sight.html&text=网易见外项目"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/01/project-netease-sight.html&title=网易见外项目"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/01/project-netease-sight.html&is_video=false&description=网易见外项目"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=网易见外项目&body=Check out this article: http://yoursite.com/2019/01/project-netease-sight.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/01/project-netease-sight.html&title=网易见外项目"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/01/project-netease-sight.html&title=网易见外项目"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/01/project-netease-sight.html&title=网易见外项目"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/01/project-netease-sight.html&title=网易见外项目"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/01/project-netease-sight.html&name=网易见外项目&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/01/project-netease-sight.html&text=从模糊到清晰：一个工具产品的优化过程"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/01/project-netease-sight.html&title=从模糊到清晰：一个工具产品的优化过程"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/01/project-netease-sight.html&is_video=false&description=从模糊到清晰：一个工具产品的优化过程"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=从模糊到清晰：一个工具产品的优化过程&body=Check out this article: http://yoursite.com/2019/01/project-netease-sight.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/01/project-netease-sight.html&title=从模糊到清晰：一个工具产品的优化过程"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/01/project-netease-sight.html&title=从模糊到清晰：一个工具产品的优化过程"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/01/project-netease-sight.html&title=从模糊到清晰：一个工具产品的优化过程"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/01/project-netease-sight.html&title=从模糊到清晰：一个工具产品的优化过程"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/01/project-netease-sight.html&name=从模糊到清晰：一个工具产品的优化过程&description=&lt;p&gt;网易见外是网易人工智能事业部孵化的一款工具类产品。我刚加入团队时产品还处于内测阶段，存在定位模糊、逻辑混乱、使用体验差等问题。加入团队后我与策划一起对产品定位进行了探索，梳理了产品功能逻辑、优化了使用体验，使得网易见外成为人工智能应用产品之一。这篇文章是对产品探索和优化过程的梳理，目的是回顾产品探索过程，积累相关产品经验。&lt;/p&gt;
+&lt;h3 id=&#34;网易见外是什么&#34;&gt;&lt;a href=&#34;#网易见外是什么&#34; class=&#34;headerlink&#34; title=&#34;网易见外是什么&#34;&gt;&lt;/a&gt;网易见外是什么&lt;/h3&gt;&lt;p&gt;近些年语音转写（STT）技术越来越成熟，讯飞、百度等公司都在语音技术的商用上做积极探索。网易在语音识别领域有多年的积淀，也在思考如何将这种能力包装为能解决用户实际问题的产品。&lt;/p&gt;
+&lt;p&gt;受内部需求的驱动，结合网易在机器翻译领域的技术积累，产品团队首先将目标瞄准在了视频的转写和翻译上。&lt;/p&gt;
+&lt;p&gt;想象你是节目组的视频制作人员，现在你想给视频加上字幕，你是不是得边听边码字啊？如果视频中的语言是英文，你想加上中文字幕，那是不是还得一句句翻译过来啊？有了语音转写 + 机器翻译技术，这个过程就简单多了。你只需上传视频，duang！文字和译文就都有了，岂不美哉。如果机器的识别和翻译结果不理想，再进行编辑就可以了，总比从头码字要快的多。以上的这个过程，在翻译领域，叫做 MT+PE （Machine Transtate + Post Editing）。&lt;/p&gt;
+&lt;p&gt;网易见外就是这样一款利用语音识别和机器翻译技术，帮助译员提高视频转写和翻译效率的工具型产品。&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
