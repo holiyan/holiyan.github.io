@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="开会从来不是件轻松的事，开大型会议尤其如此。 除了会议前的大量准备工作，会议中还要有人负责会议记录，如果演讲者和听众语言不一致，还要有专门的同传人员进行翻译。 随着识别正确率的提升，语音识别技术开始越来越多地应用于听写笔记、旅游翻译、英语学习等场景，但针对大型会议场景的产品却寥寥无几。 因此，我们尝试将AI技术应用于大型会议场景，用语音转写和机器翻译技术让会议的记录和翻译更加智能。 本文介绍了智能">
+<meta name="keywords" content="项目总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI落地探索之：智能会议同传系统">
+<meta property="og:url" content="http://yoursite.com/2019/01/project-intelligent-meeting.html">
+<meta property="og:site_name" content="造物之旅">
+<meta property="og:description" content="开会从来不是件轻松的事，开大型会议尤其如此。 除了会议前的大量准备工作，会议中还要有人负责会议记录，如果演讲者和听众语言不一致，还要有专门的同传人员进行翻译。 随着识别正确率的提升，语音识别技术开始越来越多地应用于听写笔记、旅游翻译、英语学习等场景，但针对大型会议场景的产品却寥寥无几。 因此，我们尝试将AI技术应用于大型会议场景，用语音转写和机器翻译技术让会议的记录和翻译更加智能。 本文介绍了智能">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-01-21T11:48:37.892Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AI落地探索之：智能会议同传系统">
+<meta name="twitter:description" content="开会从来不是件轻松的事，开大型会议尤其如此。 除了会议前的大量准备工作，会议中还要有人负责会议记录，如果演讲者和听众语言不一致，还要有专门的同传人员进行翻译。 随着识别正确率的提升，语音识别技术开始越来越多地应用于听写笔记、旅游翻译、英语学习等场景，但针对大型会议场景的产品却寥寥无几。 因此，我们尝试将AI技术应用于大型会议场景，用语音转写和机器翻译技术让会议的记录和翻译更加智能。 本文介绍了智能">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>AI落地探索之：智能会议同传系统</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2019/01/eliminate-uncertainties.html"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/01/project-intelligent-meeting.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/01/project-intelligent-meeting.html&text=AI落地探索之：智能会议同传系统"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/01/project-intelligent-meeting.html&title=AI落地探索之：智能会议同传系统"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/01/project-intelligent-meeting.html&is_video=false&description=AI落地探索之：智能会议同传系统"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=AI落地探索之：智能会议同传系统&body=Check out this article: http://yoursite.com/2019/01/project-intelligent-meeting.html"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/01/project-intelligent-meeting.html&title=AI落地探索之：智能会议同传系统"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/01/project-intelligent-meeting.html&title=AI落地探索之：智能会议同传系统"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/01/project-intelligent-meeting.html&title=AI落地探索之：智能会议同传系统"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/01/project-intelligent-meeting.html&title=AI落地探索之：智能会议同传系统"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/01/project-intelligent-meeting.html&name=AI落地探索之：智能会议同传系统&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#场景分析"><span class="toc-number">1.</span> <span class="toc-text">场景分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#核心需求"><span class="toc-number">2.</span> <span class="toc-text">核心需求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设计思路"><span class="toc-number">3.</span> <span class="toc-text">设计思路</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        AI落地探索之：智能会议同传系统
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <span itemprop="name">造物之旅</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-01-21T03:28:50.000Z" itemprop="datePublished">2019-01-21</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/项目总结/">项目总结</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>开会从来不是件轻松的事，开大型会议尤其如此。</p>
+<p>除了会议前的大量准备工作，会议中还要有人负责会议记录，如果演讲者和听众语言不一致，还要有专门的同传人员进行翻译。</p>
+<p>随着识别正确率的提升，语音识别技术开始越来越多地应用于听写笔记、旅游翻译、英语学习等场景，但针对大型会议场景的产品却寥寥无几。</p>
+<p>因此，我们尝试将AI技术应用于大型会议场景，用语音转写和机器翻译技术让会议的记录和翻译更加智能。</p>
+<p>本文介绍了智能会议系统的产品分析过程和详细设计方案。</p>
+<h3 id="场景分析"><a href="#场景分析" class="headerlink" title="场景分析"></a>场景分析</h3><p>会议场景非常多样，如果按照发言人的数量区分，可分为单人和多人两种情况。</p>
+<p>多人轮流发言比单人更加复杂，音源输入可能不唯一，会议记录中还涉及区分角色，这给目前的语音识别正确率带来了极大的挑战。</p>
+<p>因此，我们在立项之初主要考虑单人发言的情况，典型的场景有政府工作汇报、大会演讲、学术汇报等场景。</p>
+<p>受限于技术水平，主要应用场景有学术交流、大会演讲、政府工作汇报等场景。说的更直白一点，我们想做AI同传。一人对多人，讲话者和受众。演讲者的角色包括单人和多人两种情况。</p>
+<p>一对多</p>
+<p>多对多</p>
+<p>一对一</p>
+<h3 id="核心需求"><a href="#核心需求" class="headerlink" title="核心需求"></a>核心需求</h3><h3 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h3><p>短期内解决会议记录的问题，</p>
+<p>长远的目标是同传翻译。</p>
+<p>场景</p>
+<p>记笔记是件麻烦事（政府会议、庭审记录） → 利用语音转写功能</p>
+<p>C端已经有搜狗听写等产品，而大型会议，需要输出会议稿件的，产品寥寥无几。</p>
+<p>场景是大会现场。</p>
+<p>目的一方面是想切入语音识别市场</p>
+<p>场景决定了：投屏客户端和主控客户端</p>
+<p>最核心的能力是什么：让会议更智能</p>
+<p>坐在教室后排的同学往往听不清老师在讲什么。</p>
+<p>如何解决转写收声的问题</p>
+<p>从问题出发</p>
+<p>B端产品。</p>
+<p>一站式智能会议解决方案</p>
+<p>使用过程如下</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#场景分析"><span class="toc-number">1.</span> <span class="toc-text">场景分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#核心需求"><span class="toc-number">2.</span> <span class="toc-text">核心需求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设计思路"><span class="toc-number">3.</span> <span class="toc-text">设计思路</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/01/project-intelligent-meeting.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/01/project-intelligent-meeting.html&text=AI落地探索之：智能会议同传系统"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/01/project-intelligent-meeting.html&title=AI落地探索之：智能会议同传系统"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/01/project-intelligent-meeting.html&is_video=false&description=AI落地探索之：智能会议同传系统"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=AI落地探索之：智能会议同传系统&body=Check out this article: http://yoursite.com/2019/01/project-intelligent-meeting.html"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/01/project-intelligent-meeting.html&title=AI落地探索之：智能会议同传系统"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/01/project-intelligent-meeting.html&title=AI落地探索之：智能会议同传系统"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/01/project-intelligent-meeting.html&title=AI落地探索之：智能会议同传系统"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/01/project-intelligent-meeting.html&title=AI落地探索之：智能会议同传系统"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/01/project-intelligent-meeting.html&name=AI落地探索之：智能会议同传系统&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 Ryan
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
