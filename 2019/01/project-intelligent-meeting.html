@@ -6,18 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="开会从来不是件轻松的事，开大型会议尤其如此。 除了会议前的大量准备工作，会议中还要有人负责会议记录，如果演讲者和听众语言不一致，还要有专门的同传人员进行翻译。 随着识别正确率的提升，语音识别技术开始越来越多地应用于听写笔记、旅游翻译、英语学习等场景，但针对大型会议场景的产品却寥寥无几。 因此，我们尝试将AI技术应用于大型会议场景，用语音转写和机器翻译技术让会议的记录和翻译更加智能。 本文介绍了智能">
+    <meta name="description" content="开会从来不是件轻松的事，开大型会议尤其如此。 除了会议前的大量准备工作，会议中还要有人负责会议记录，如果演讲者和听众语言不一致，还要有专门的同传人员进行翻译。 随着语音转写和机器翻译技术的日渐成熟，出现了语音输入法、智能翻译机等C端产品，满足了速记笔记、旅游翻译等用户需求。 在中大型会议场景下，也广泛存在会议速记、会议同传等需求，但市场上能满足相关这种需求的产品却寥寥无几。 因此，我们尝试将语音转">
 <meta name="keywords" content="项目总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AI落地探索之：智能会议同传系统">
 <meta property="og:url" content="http://yoursite.com/2019/01/project-intelligent-meeting.html">
 <meta property="og:site_name" content="造物之旅">
-<meta property="og:description" content="开会从来不是件轻松的事，开大型会议尤其如此。 除了会议前的大量准备工作，会议中还要有人负责会议记录，如果演讲者和听众语言不一致，还要有专门的同传人员进行翻译。 随着识别正确率的提升，语音识别技术开始越来越多地应用于听写笔记、旅游翻译、英语学习等场景，但针对大型会议场景的产品却寥寥无几。 因此，我们尝试将AI技术应用于大型会议场景，用语音转写和机器翻译技术让会议的记录和翻译更加智能。 本文介绍了智能">
+<meta property="og:description" content="开会从来不是件轻松的事，开大型会议尤其如此。 除了会议前的大量准备工作，会议中还要有人负责会议记录，如果演讲者和听众语言不一致，还要有专门的同传人员进行翻译。 随着语音转写和机器翻译技术的日渐成熟，出现了语音输入法、智能翻译机等C端产品，满足了速记笔记、旅游翻译等用户需求。 在中大型会议场景下，也广泛存在会议速记、会议同传等需求，但市场上能满足相关这种需求的产品却寥寥无几。 因此，我们尝试将语音转">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-01-21T11:48:37.892Z">
+<meta property="og:image" content="http://yoursite.com/2019/01/project-intelligent-meeting/forum.jpg">
+<meta property="og:image" content="http://yoursite.com/2019/01/project-intelligent-meeting/audio-processing-flow.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/project-intelligent-meeting/app-info-architecture.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/project-intelligent-meeting/subfunction-processing-flow.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/project-intelligent-meeting/app-home.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/project-intelligent-meeting/app-meeting.png">
+<meta property="og:image" content="http://yoursite.com/2019/01/project-intelligent-meeting/set-meeting.gif">
+<meta property="og:image" content="http://yoursite.com/2019/01/project-intelligent-meeting/text-projection.gif">
+<meta property="og:updated_time" content="2019-01-28T03:33:14.741Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AI落地探索之：智能会议同传系统">
-<meta name="twitter:description" content="开会从来不是件轻松的事，开大型会议尤其如此。 除了会议前的大量准备工作，会议中还要有人负责会议记录，如果演讲者和听众语言不一致，还要有专门的同传人员进行翻译。 随着识别正确率的提升，语音识别技术开始越来越多地应用于听写笔记、旅游翻译、英语学习等场景，但针对大型会议场景的产品却寥寥无几。 因此，我们尝试将AI技术应用于大型会议场景，用语音转写和机器翻译技术让会议的记录和翻译更加智能。 本文介绍了智能">
+<meta name="twitter:description" content="开会从来不是件轻松的事，开大型会议尤其如此。 除了会议前的大量准备工作，会议中还要有人负责会议记录，如果演讲者和听众语言不一致，还要有专门的同传人员进行翻译。 随着语音转写和机器翻译技术的日渐成熟，出现了语音输入法、智能翻译机等C端产品，满足了速记笔记、旅游翻译等用户需求。 在中大型会议场景下，也广泛存在会议速记、会议同传等需求，但市场上能满足相关这种需求的产品却寥寥无几。 因此，我们尝试将语音转">
+<meta name="twitter:image" content="http://yoursite.com/2019/01/project-intelligent-meeting/forum.jpg">
     
     
         
@@ -99,7 +108,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#场景分析"><span class="toc-number">1.</span> <span class="toc-text">场景分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#核心需求"><span class="toc-number">2.</span> <span class="toc-text">核心需求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设计思路"><span class="toc-number">3.</span> <span class="toc-text">设计思路</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#场景和需求分析"><span class="toc-number">1.</span> <span class="toc-text">场景和需求分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#产品形态和框架"><span class="toc-number">2.</span> <span class="toc-text">产品形态和框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#产品原型设计"><span class="toc-number">3.</span> <span class="toc-text">产品原型设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -145,31 +154,68 @@
   <div class="content" itemprop="articleBody">
     <p>开会从来不是件轻松的事，开大型会议尤其如此。</p>
 <p>除了会议前的大量准备工作，会议中还要有人负责会议记录，如果演讲者和听众语言不一致，还要有专门的同传人员进行翻译。</p>
-<p>随着识别正确率的提升，语音识别技术开始越来越多地应用于听写笔记、旅游翻译、英语学习等场景，但针对大型会议场景的产品却寥寥无几。</p>
-<p>因此，我们尝试将AI技术应用于大型会议场景，用语音转写和机器翻译技术让会议的记录和翻译更加智能。</p>
+<p>随着语音转写和机器翻译技术的日渐成熟，出现了语音输入法、智能翻译机等C端产品，满足了速记笔记、旅游翻译等用户需求。</p>
+<p>在中大型会议场景下，也广泛存在会议速记、会议同传等需求，但市场上能满足相关这种需求的产品却寥寥无几。</p>
+<p>因此，我们尝试将语音转写和机器翻译应用于中大型会议场景，用AI技术让会议速记、会议同传更加更加方便。因此有了智能会议系统这个项目。</p>
 <p>本文介绍了智能会议系统的产品分析过程和详细设计方案。</p>
-<h3 id="场景分析"><a href="#场景分析" class="headerlink" title="场景分析"></a>场景分析</h3><p>会议场景非常多样，如果按照发言人的数量区分，可分为单人和多人两种情况。</p>
-<p>多人轮流发言比单人更加复杂，音源输入可能不唯一，会议记录中还涉及区分角色，这给目前的语音识别正确率带来了极大的挑战。</p>
-<p>因此，我们在立项之初主要考虑单人发言的情况，典型的场景有政府工作汇报、大会演讲、学术汇报等场景。</p>
-<p>受限于技术水平，主要应用场景有学术交流、大会演讲、政府工作汇报等场景。说的更直白一点，我们想做AI同传。一人对多人，讲话者和受众。演讲者的角色包括单人和多人两种情况。</p>
-<p>一对多</p>
-<p>多对多</p>
-<p>一对一</p>
-<h3 id="核心需求"><a href="#核心需求" class="headerlink" title="核心需求"></a>核心需求</h3><h3 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h3><p>短期内解决会议记录的问题，</p>
-<p>长远的目标是同传翻译。</p>
-<p>场景</p>
-<p>记笔记是件麻烦事（政府会议、庭审记录） → 利用语音转写功能</p>
-<p>C端已经有搜狗听写等产品，而大型会议，需要输出会议稿件的，产品寥寥无几。</p>
-<p>场景是大会现场。</p>
-<p>目的一方面是想切入语音识别市场</p>
-<p>场景决定了：投屏客户端和主控客户端</p>
-<p>最核心的能力是什么：让会议更智能</p>
-<p>坐在教室后排的同学往往听不清老师在讲什么。</p>
-<p>如何解决转写收声的问题</p>
-<p>从问题出发</p>
-<p>B端产品。</p>
-<p>一站式智能会议解决方案</p>
-<p>使用过程如下</p>
+<h3 id="场景和需求分析"><a href="#场景和需求分析" class="headerlink" title="场景和需求分析"></a>场景和需求分析</h3><p>会议场景有很多种，抛开会议规模、多媒体设备等因素，仅考虑发言人角色，就有产品发布会这样的单人演讲、博鳌论坛这样的多人对话，也有记者会这样的主持人与观众的对答。</p>
+<p>后两种场景下存在多个输入音源，对话过程中有话筒传递、对话被打断、音源输入重叠等情况，会极大影响语音识别的准确率。因此在第一个版本中，我们只考虑单人发言的情况。</p>
+<p>除了上面提到的产品发布会以外，单人发言的典型场景还有政府工作汇报、学术汇报和各种形式的大会演讲等。</p>
+<p><img src="/2019/01/project-intelligent-meeting/forum.jpg" alt="forum"></p>
+<p>这一场景中的需求除了速记和同传，还包含转写/翻译结果投屏等需求，详细需求描述如下：</p>
+<ul>
+<li><p>准确地将语音转写为文本需求</p>
+<p>转写准确率直接决定转写结果的可阅读性，也间接影响了翻译效果，是决定该系统是否可商用的最重要因素。目前各大竞品所宣称的转写准确率普遍在95%以上，我们的准确率不能低于该标准。</p>
+</li>
+<li><p>转写结果实时翻译需求</p>
+<p>很多知识分享大会（如 I/O开发者大会、IxDC大会）、学术报告、产品发布会都存在发言人语言与听众不一致的情况，因此转写结果支持实时翻译也是基本需求之一。从团队算法能力出发，会议系统前期需支持中英互译。</p>
+</li>
+<li><p>转写和翻译结果延迟低需求</p>
+<p>为确保阅读效果，文本展示延迟要做到1s以下才可用，参考同类竞品，会议系统的延迟应该在200～300ms。</p>
+</li>
+<li><p>转写和翻译结果实时投屏需求</p>
+<p>将翻译结果传达给听众有两种方式，一种是将文本结果投影在大屏幕上，一种是将文本结果合成语音后播放，后一种技术不成熟，目前采用投屏的方式。</p>
+</li>
+<li><p>转写和翻译结果支持编辑的需求</p>
+<p>受限于算法能力和声音采集效果，目前的转写和翻译结果还无法做到完全正确，因此结果需要支持编辑。为了提高出稿效率，最好在发言人演讲的同时就能对结果进行编辑。</p>
+</li>
+<li><p>内容安全保密需求</p>
+<p>行业内部展会、企业高层会议、政府人员讲话等会议场景对会议内容保密性要求较高，会议系统需要确保内容不能轻易泄露。</p>
+</li>
+</ul>
+<p>除以上几个高优先级需求外，较低的需求还包括投屏字幕样式可调整、转写翻译结果可导出等，此处不再详细说明。</p>
+<h3 id="产品形态和框架"><a href="#产品形态和框架" class="headerlink" title="产品形态和框架"></a>产品形态和框架</h3><p>为了满足将采集到的音频转写翻译并投影至大屏幕的这一核心需求，需要分析在会议厅场景下音频信号的详细处理过程。</p>
+<p>在传统的多媒体会议室中，发言人的音频一般经过音控台（如果有的话）直接输出给音箱：</p>
+<p>音频 → 音控台 →音箱</p>
+<p>将声音的转写和翻译结果投影至大屏幕要稍微复杂一些，从多路声卡中输出的音频需要先经过算法引擎处理，然后将处理结果传输给投屏端电脑，再投影至大屏幕。</p>
+<p>音频 → 音控台 → 算法引擎 → 投屏电脑 → 大屏幕</p>
+<p>这其中算法引擎可打包安装在本地电脑上，也可安装在云端。同时转写翻译过程的暂停/继续、翻译语言等需要用程序（主控端）进行控制。</p>
+<p><img src="/2019/01/project-intelligent-meeting/audio-processing-flow.png" alt="audio-processing-flow"></p>
+<p>上图是音频处理过程的示例，但这只是多种类型的会议室设备布置中的一种情况。在某些中型的会议室中，布置算法引擎的设备和投屏设备可能是同一台电脑。</p>
+<p>为了适应这种会议室设备布置的多样性，我们将产品形态划分为控制转写/翻译过程的主控端和控制投屏显示的投屏端，各自的功能如下：</p>
+<ul>
+<li>主控端：账户登录/退出、客户端和账户设置、会议配置、转写翻译结果查看和编辑等。</li>
+<li>投屏端：连接主控端、显示转写/翻译结果、配置显示样式</li>
+</ul>
+<p>主控端和投屏端的详细信息架构如下所示：</p>
+<p><img src="/2019/01/project-intelligent-meeting/app-info-architecture.png" alt="controller-info-architecture"></p>
+<p>确定了产品形态和信息架构后，就可以开始着手原型设计了。</p>
+<h3 id="产品原型设计"><a href="#产品原型设计" class="headerlink" title="产品原型设计"></a>产品原型设计</h3><p>信息框架只能告诉我们产品具有哪些功能，不能告诉我们完成这些功能的具体任务流程。为了能让用户顺利完成任务，需要分析用户的操作流程。使用会议系统过程中所包含的子任务有：登录退出、重置密码、会议配置、投屏配置。</p>
+<p><img src="/2019/01/project-intelligent-meeting/subfunction-processing-flow.png" alt="用户操作流程"></p>
+<p>由于登录/退出和重置密码比较简单，以下我着重展示会议配置和投屏配置的原型。</p>
+<p>1 会议配置</p>
+<p>会议配置是指会议开始前，会议记录员为会议配置名称和发言人语言等项目的过程，只需点击主页的创建会议按钮即可创建会议。</p>
+<p><img src="/2019/01/project-intelligent-meeting/app-home.png" alt="image-20190124163430655"></p>
+<p>创建会议后，在页面左侧配置语言、设备等项目，配置完成后点击开始开始会议按钮即可开始转写/翻译。在右侧可以看到实时转写的文本，且转写结果支持编辑。</p>
+<p><img src="/2019/01/project-intelligent-meeting/app-meeting.png" alt="image-20190124163533109"></p>
+<p>下面是上线后的主控端配置会议的过程：</p>
+<p><img src="/2019/01/project-intelligent-meeting/set-meeting.gif" alt="会议配置"></p>
+<p>从上图可以看到，在主控端配置会议后（已连接服务器、音频线路畅通），便可以实现转写和翻译麦克风收集到的音频了。但如果会议系统的设备布局如图二所示，那文本结果并不能投影至大屏幕，因此需要在投屏电脑上安装投屏端。</p>
+<p>2 投屏配置</p>
+<p>投屏的配置非常简单，只需一个按钮即可连接至投屏。具体的原型此处不再展示，连接过程如下图所示。</p>
+<p><img src="/2019/01/project-intelligent-meeting/text-projection.gif" alt="text-projection"></p>
+<p>连接后，上图跳动的文字是发言人音频的转写结果，该面板支持设置字号、对齐、全屏等展示样式。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>传统的会议速记和同传不仅对速记员/同传人员的短期记忆和信息处理速度要求较高，还需要具备大量专业领域知识，而这正是机器所擅长的。虽然以目前的技术机器还不能做到完全替代人类，但这将是大势所趋。本项目探索了将语音转写和机器翻译应用于大型会议，希望我们做产品的过程能给相关从业者以启发。</p>
 
   </div>
 </article>
@@ -193,7 +239,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#场景分析"><span class="toc-number">1.</span> <span class="toc-text">场景分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#核心需求"><span class="toc-number">2.</span> <span class="toc-text">核心需求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#设计思路"><span class="toc-number">3.</span> <span class="toc-text">设计思路</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#场景和需求分析"><span class="toc-number">1.</span> <span class="toc-text">场景和需求分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#产品形态和框架"><span class="toc-number">2.</span> <span class="toc-text">产品形态和框架</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#产品原型设计"><span class="toc-number">3.</span> <span class="toc-text">产品原型设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
