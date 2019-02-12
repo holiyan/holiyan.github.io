@@ -482,6 +482,7 @@ body {
 .content a {
   color: #383838;
   text-decoration: none;
+  word-wrap: break-word /* 链接文本超出时换行 */;
   background-image: linear-gradient(transparent, transparent 5px, #383838 5px, #383838);
   background-position: bottom;
   background-size: 100% 6px;
@@ -1182,6 +1183,10 @@ article .content .caption {
 .content p {
   margin: 0.5rem 0 /* 设置文章中段落的margin值 */;
 }
+.content table {
+  table-layout: fixed;
+  word-wrap: break-word;
+}
 blockquote {
   font-weight: 400 !important;
 }
@@ -1534,4 +1539,7 @@ blockquote:before {
   vertical-align: -0.4em;
   font-size: 2em;
   line-height: 0.1em;
+}
+img {
+  max-width: 100% /* 限制首页图片最大尺寸 */;
 }
