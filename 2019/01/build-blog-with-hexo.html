@@ -6,21 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="一直想搭建自己的个人网站，前些天了解了 Hexo 建站大法，捯饬了一番竟然成功了，记录过程以免大家重复趟坑。我所用的设备是 Mac ，网站部署至 github 和 阿里云虚拟主机。 Hexo 建站流程使用 Hexo 没有其它原因，只是相对方便，并且搭出来的网站效果不错。官方对 Hexo 的解释是：  Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析">
+    <meta name="description" content="一直想搭建自己的个人网站，前些天了解了 Hexo 建站大法，捯饬了一番竟然成功了，记录过程以免大家重复趟坑。本教程所用的设备是 Mac ，网站同时部署至 github 和 阿里云虚拟主机。">
 <meta name="keywords" content="教程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用 Hexo 搭建个人网站">
 <meta property="og:url" content="http://yoursite.com/2019/01/build-blog-with-hexo.html">
 <meta property="og:site_name" content="Ryan&#39;s Blog">
-<meta property="og:description" content="一直想搭建自己的个人网站，前些天了解了 Hexo 建站大法，捯饬了一番竟然成功了，记录过程以免大家重复趟坑。我所用的设备是 Mac ，网站部署至 github 和 阿里云虚拟主机。 Hexo 建站流程使用 Hexo 没有其它原因，只是相对方便，并且搭出来的网站效果不错。官方对 Hexo 的解释是：  Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析">
+<meta property="og:description" content="一直想搭建自己的个人网站，前些天了解了 Hexo 建站大法，捯饬了一番竟然成功了，记录过程以免大家重复趟坑。本教程所用的设备是 Mac ，网站同时部署至 github 和 阿里云虚拟主机。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/2019/01/build-blog-with-hexo/Hexo%20建站流程.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/build-blog-with-hexo/首页文章列表.png">
 <meta property="og:image" content="http://yoursite.com/2019/01/build-blog-with-hexo/personal%20domain.png">
-<meta property="og:updated_time" content="2019-01-16T02:25:25.344Z">
+<meta property="og:updated_time" content="2019-02-14T02:06:18.993Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用 Hexo 搭建个人网站">
-<meta name="twitter:description" content="一直想搭建自己的个人网站，前些天了解了 Hexo 建站大法，捯饬了一番竟然成功了，记录过程以免大家重复趟坑。我所用的设备是 Mac ，网站部署至 github 和 阿里云虚拟主机。 Hexo 建站流程使用 Hexo 没有其它原因，只是相对方便，并且搭出来的网站效果不错。官方对 Hexo 的解释是：  Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析">
+<meta name="twitter:description" content="一直想搭建自己的个人网站，前些天了解了 Hexo 建站大法，捯饬了一番竟然成功了，记录过程以免大家重复趟坑。本教程所用的设备是 Mac ，网站同时部署至 github 和 阿里云虚拟主机。">
 <meta name="twitter:image" content="http://yoursite.com/2019/01/build-blog-with-hexo/Hexo%20建站流程.png">
     
     
@@ -100,23 +100,12 @@
   <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/01/build-blog-with-hexo.html&title=用 Hexo 搭建个人网站"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/01/build-blog-with-hexo.html&title=用 Hexo 搭建个人网站"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/01/build-blog-with-hexo.html&title=用 Hexo 搭建个人网站"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/01/build-blog-with-hexo.html&name=用 Hexo 搭建个人网站&description=&lt;p&gt;一直想搭建自己的个人网站，前些天了解了 Hexo 建站大法，捯饬了一番竟然成功了，记录过程以免大家重复趟坑。我所用的设备是 Mac ，网站部署至 github 和 阿里云虚拟主机。&lt;/p&gt;
-&lt;h2 id=&#34;Hexo-建站流程&#34;&gt;&lt;a href=&#34;#Hexo-建站流程&#34; class=&#34;headerlink&#34; title=&#34;Hexo 建站流程&#34;&gt;&lt;/a&gt;Hexo 建站流程&lt;/h2&gt;&lt;p&gt;使用 Hexo 没有其它原因，只是相对方便，并且搭出来的网站效果不错。官方对 Hexo 的解释是：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;刚接触的时候看这段话仍然对 Hexo 一知半解，折腾完之后才摸出个大概门道。Hexo 建站过程可以用下图简单示例：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/2019/01/build-blog-with-hexo/Hexo 建站流程.png&#34; alt=&#34;Hexo 建站流程&#34;&gt;&lt;/p&gt;
-&lt;p&gt;用文字描述就是，利用 Markdown 语法编辑文章，编辑完成后使用 Hexo 提供的主题生成静态页面，然后将文件上传至github等服务器，最后将域名指向该服务器地址。下面详细说明建站过程。&lt;/p&gt;
-&lt;h2 id=&#34;一、安装并初始化-hexo&#34;&gt;&lt;a href=&#34;#一、安装并初始化-hexo&#34; class=&#34;headerlink&#34; title=&#34;一、安装并初始化 hexo&#34;&gt;&lt;/a&gt;一、安装并初始化 hexo&lt;/h2&gt;&lt;p&gt;由于hexo依赖于nodejs和git，因此我们需要提前安装这两个。&lt;/p&gt;
-&lt;p&gt;1 安装 node.js 和 git&lt;br&gt;node.js 到底有什么用，我其实也不知道。具体参考：&lt;a href=&#34;https://www.zhihu.com/question/33578075&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.zhihu.com/question/33578075&lt;/a&gt;&lt;br&gt;我在Mac下如何安装node：&lt;/p&gt;
-&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ brew install node&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;$ pip install git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;2 安装Hexo&lt;br&gt;安装了Node和git后，就可以安装hexo了，mac下安装非常简单：&lt;br&gt;&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/01/build-blog-with-hexo.html&name=用 Hexo 搭建个人网站&description=&lt;p&gt;一直想搭建自己的个人网站，前些天了解了 Hexo 建站大法，捯饬了一番竟然成功了，记录过程以免大家重复趟坑。本教程所用的设备是 Mac ，网站同时部署至 github 和 阿里云虚拟主机。&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-建站流程"><span class="toc-number">1.</span> <span class="toc-text">Hexo 建站流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、安装并初始化-hexo"><span class="toc-number">2.</span> <span class="toc-text">一、安装并初始化 hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、配置主题"><span class="toc-number">3.</span> <span class="toc-text">二、配置主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#更换主题"><span class="toc-number">3.1.</span> <span class="toc-text">更换主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义主题"><span class="toc-number">3.2.</span> <span class="toc-text">自定义主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、写文章"><span class="toc-number">4.</span> <span class="toc-text">三、写文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、生成静态文件"><span class="toc-number">5.</span> <span class="toc-text">四、生成静态文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、部署至服务器"><span class="toc-number">6.</span> <span class="toc-text">五、部署至服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#部署至-github"><span class="toc-number">6.1.</span> <span class="toc-text">部署至 github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署至阿里云虚拟主机"><span class="toc-number">6.2.</span> <span class="toc-text">部署至阿里云虚拟主机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、域名配置"><span class="toc-number">7.</span> <span class="toc-text">六、域名配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">8.</span> <span class="toc-text">总结</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-建站流程简介"><span class="toc-number">1.</span> <span class="toc-text">Hexo 建站流程简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、安装并初始化-hexo"><span class="toc-number">2.</span> <span class="toc-text">一、安装并初始化 hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、配置主题"><span class="toc-number">3.</span> <span class="toc-text">二、配置主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#更换主题"><span class="toc-number">3.1.</span> <span class="toc-text">更换主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义主题"><span class="toc-number">3.2.</span> <span class="toc-text">自定义主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、写文章"><span class="toc-number">4.</span> <span class="toc-text">三、写文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、生成静态文件"><span class="toc-number">5.</span> <span class="toc-text">四、生成静态文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、部署至服务器"><span class="toc-number">6.</span> <span class="toc-text">五、部署至服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#部署至-github"><span class="toc-number">6.1.</span> <span class="toc-text">部署至 github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署至阿里云虚拟主机"><span class="toc-number">6.2.</span> <span class="toc-text">部署至阿里云虚拟主机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、域名配置"><span class="toc-number">7.</span> <span class="toc-text">六、域名配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">8.</span> <span class="toc-text">总结</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -160,8 +149,9 @@
   
 
   <div class="content" itemprop="articleBody">
-    <p>一直想搭建自己的个人网站，前些天了解了 Hexo 建站大法，捯饬了一番竟然成功了，记录过程以免大家重复趟坑。我所用的设备是 Mac ，网站部署至 github 和 阿里云虚拟主机。</p>
-<h2 id="Hexo-建站流程"><a href="#Hexo-建站流程" class="headerlink" title="Hexo 建站流程"></a>Hexo 建站流程</h2><p>使用 Hexo 没有其它原因，只是相对方便，并且搭出来的网站效果不错。官方对 Hexo 的解释是：</p>
+    <p>一直想搭建自己的个人网站，前些天了解了 Hexo 建站大法，捯饬了一番竟然成功了，记录过程以免大家重复趟坑。本教程所用的设备是 Mac ，网站同时部署至 github 和 阿里云虚拟主机。</p>
+<a id="more"></a> 
+<h2 id="Hexo-建站流程简介"><a href="#Hexo-建站流程简介" class="headerlink" title="Hexo 建站流程简介"></a>Hexo 建站流程简介</h2><p>使用 Hexo 没有其它原因，只是相对方便，并且搭出来的网站效果不错。官方对 Hexo 的解释是：</p>
 <blockquote>
 <p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 </blockquote>
@@ -171,7 +161,8 @@
 <h2 id="一、安装并初始化-hexo"><a href="#一、安装并初始化-hexo" class="headerlink" title="一、安装并初始化 hexo"></a>一、安装并初始化 hexo</h2><p>由于hexo依赖于nodejs和git，因此我们需要提前安装这两个。</p>
 <p>1 安装 node.js 和 git<br>node.js 到底有什么用，我其实也不知道。具体参考：<a href="https://www.zhihu.com/question/33578075" target="_blank" rel="noopener">https://www.zhihu.com/question/33578075</a><br>我在Mac下如何安装node：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install node</span><br><span class="line">$ pip install git</span><br></pre></td></tr></table></figure>
-<p>2 安装Hexo<br>安装了Node和git后，就可以安装hexo了，mac下安装非常简单：<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<p>2 安装Hexo<br>安装了Node和git后，就可以安装hexo了，mac下安装非常简单：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 <p>3 初始化<br>进入存放网站内容的本地文件夹：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd /target_folder</span><br></pre></td></tr></table></figure></p>
 <p>两行代码即可初始化文件夹：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init   //初始化文件夹</span><br><span class="line">$ npm install    //安装必要的包</span><br></pre></td></tr></table></figure></p>
 <p>4 初次体验<br>由于hexo自带默认主题landscape，初始化了文件夹后就可以看看博客的样子了。执行以下命令即可预览博客。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g   // 生成静态页面</span><br><span class="line">$ hexo s // 本地服务器查看</span><br></pre></td></tr></table></figure></p>
@@ -278,7 +269,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-建站流程"><span class="toc-number">1.</span> <span class="toc-text">Hexo 建站流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、安装并初始化-hexo"><span class="toc-number">2.</span> <span class="toc-text">一、安装并初始化 hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、配置主题"><span class="toc-number">3.</span> <span class="toc-text">二、配置主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#更换主题"><span class="toc-number">3.1.</span> <span class="toc-text">更换主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义主题"><span class="toc-number">3.2.</span> <span class="toc-text">自定义主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、写文章"><span class="toc-number">4.</span> <span class="toc-text">三、写文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、生成静态文件"><span class="toc-number">5.</span> <span class="toc-text">四、生成静态文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、部署至服务器"><span class="toc-number">6.</span> <span class="toc-text">五、部署至服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#部署至-github"><span class="toc-number">6.1.</span> <span class="toc-text">部署至 github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署至阿里云虚拟主机"><span class="toc-number">6.2.</span> <span class="toc-text">部署至阿里云虚拟主机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、域名配置"><span class="toc-number">7.</span> <span class="toc-text">六、域名配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">8.</span> <span class="toc-text">总结</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo-建站流程简介"><span class="toc-number">1.</span> <span class="toc-text">Hexo 建站流程简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、安装并初始化-hexo"><span class="toc-number">2.</span> <span class="toc-text">一、安装并初始化 hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、配置主题"><span class="toc-number">3.</span> <span class="toc-text">二、配置主题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#更换主题"><span class="toc-number">3.1.</span> <span class="toc-text">更换主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义主题"><span class="toc-number">3.2.</span> <span class="toc-text">自定义主题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、写文章"><span class="toc-number">4.</span> <span class="toc-text">三、写文章</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、生成静态文件"><span class="toc-number">5.</span> <span class="toc-text">四、生成静态文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、部署至服务器"><span class="toc-number">6.</span> <span class="toc-text">五、部署至服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#部署至-github"><span class="toc-number">6.1.</span> <span class="toc-text">部署至 github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署至阿里云虚拟主机"><span class="toc-number">6.2.</span> <span class="toc-text">部署至阿里云虚拟主机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、域名配置"><span class="toc-number">7.</span> <span class="toc-text">六、域名配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">8.</span> <span class="toc-text">总结</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
@@ -292,18 +283,7 @@
   <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/01/build-blog-with-hexo.html&title=用 Hexo 搭建个人网站"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/01/build-blog-with-hexo.html&title=用 Hexo 搭建个人网站"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/01/build-blog-with-hexo.html&title=用 Hexo 搭建个人网站"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/01/build-blog-with-hexo.html&name=用 Hexo 搭建个人网站&description=&lt;p&gt;一直想搭建自己的个人网站，前些天了解了 Hexo 建站大法，捯饬了一番竟然成功了，记录过程以免大家重复趟坑。我所用的设备是 Mac ，网站部署至 github 和 阿里云虚拟主机。&lt;/p&gt;
-&lt;h2 id=&#34;Hexo-建站流程&#34;&gt;&lt;a href=&#34;#Hexo-建站流程&#34; class=&#34;headerlink&#34; title=&#34;Hexo 建站流程&#34;&gt;&lt;/a&gt;Hexo 建站流程&lt;/h2&gt;&lt;p&gt;使用 Hexo 没有其它原因，只是相对方便，并且搭出来的网站效果不错。官方对 Hexo 的解释是：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;刚接触的时候看这段话仍然对 Hexo 一知半解，折腾完之后才摸出个大概门道。Hexo 建站过程可以用下图简单示例：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/2019/01/build-blog-with-hexo/Hexo 建站流程.png&#34; alt=&#34;Hexo 建站流程&#34;&gt;&lt;/p&gt;
-&lt;p&gt;用文字描述就是，利用 Markdown 语法编辑文章，编辑完成后使用 Hexo 提供的主题生成静态页面，然后将文件上传至github等服务器，最后将域名指向该服务器地址。下面详细说明建站过程。&lt;/p&gt;
-&lt;h2 id=&#34;一、安装并初始化-hexo&#34;&gt;&lt;a href=&#34;#一、安装并初始化-hexo&#34; class=&#34;headerlink&#34; title=&#34;一、安装并初始化 hexo&#34;&gt;&lt;/a&gt;一、安装并初始化 hexo&lt;/h2&gt;&lt;p&gt;由于hexo依赖于nodejs和git，因此我们需要提前安装这两个。&lt;/p&gt;
-&lt;p&gt;1 安装 node.js 和 git&lt;br&gt;node.js 到底有什么用，我其实也不知道。具体参考：&lt;a href=&#34;https://www.zhihu.com/question/33578075&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.zhihu.com/question/33578075&lt;/a&gt;&lt;br&gt;我在Mac下如何安装node：&lt;/p&gt;
-&lt;figure class=&#34;highlight plain&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ brew install node&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;$ pip install git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;2 安装Hexo&lt;br&gt;安装了Node和git后，就可以安装hexo了，mac下安装非常简单：&lt;br&gt;&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/01/build-blog-with-hexo.html&name=用 Hexo 搭建个人网站&description=&lt;p&gt;一直想搭建自己的个人网站，前些天了解了 Hexo 建站大法，捯饬了一番竟然成功了，记录过程以免大家重复趟坑。本教程所用的设备是 Mac ，网站同时部署至 github 和 阿里云虚拟主机。&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
